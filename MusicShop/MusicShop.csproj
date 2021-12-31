@@ -98,10 +98,25 @@
     <Resource Include="Images\—Pngtree—fast shopping cart icon design_5537563.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="—Pngtree—fast shopping cart icon design_5537563.png" />
+    <Resource Include="Images\BagOnMouseOver.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\BagOnMouseOver.png" />
+    <Resource Include="letter1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\letter2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gift2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\user2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

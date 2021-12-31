@@ -79,16 +79,201 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0.408"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-        
-        
+
+
+        <ImageBrush x:Key="Letter" ImageSource="C:\Users\barte\source\repos\MusicShop\MusicShop\Images\letter2.png" Stretch="Uniform"/>
+        <Style x:Key="Letter2" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Letter}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Letter}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Letter}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Letter}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Storyboard x:Key="LetterAnimation">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="Letter">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-34.188"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="28.231"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0.408"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="GiftAnimation">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="Gift">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-34.188"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="28.231"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0.408"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <ImageBrush x:Key="Gift2" ImageSource="C:\Users\barte\source\repos\MusicShop\MusicShop\Images\gift2.png" Stretch="Uniform"/>
+        <Style x:Key="Gift" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Gift2}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Gift2}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Gift2}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Gift2}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Storyboard x:Key="UserAnimation">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="User">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-34.188"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="28.231"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0.408"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <ImageBrush x:Key="User" ImageSource="C:\Users\barte\source\repos\MusicShop\MusicShop\Images\user2.png" Stretch="Uniform"/>
+        <Style x:Key="User2" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" Margin="0,0,3.8,4.2">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource User}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource User}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource User}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource User}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
+        <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
+        <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
+        <Style x:Key="SearchTextBox" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" CornerRadius="25" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True" Height="Auto" Opacity="0.8" Margin="0,4,0,-6.8">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="True" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Opacity="0.6" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FFC5C5C5"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+
+
+
 
 
     </Window.Resources>
 
 
 
-    <Border CornerRadius="52" BorderThickness="10" >
-        <Border CornerRadius="35" BorderThickness="20">
+
+
+
+    <Border CornerRadius="52" BorderThickness="10" BorderBrush="White">
+        <Border CornerRadius="35" BorderThickness="12">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="black" Offset="0.0"/>
@@ -98,36 +283,88 @@
             </Border.BorderBrush>
 
             <Grid>
+
                 <Grid.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+
                         <GradientStop Color="black" Offset="0.0"/>
                         <GradientStop Color="BlueViolet" Offset="0.5"/>
                         <GradientStop Color="DarkBlue" Offset="1.1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Button x:Name="Bag" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="797,-10,-1.2,0" VerticalAlignment="Top" Width="145" Height="127" RenderTransformOrigin="0.5,0.5" Click="Bag_Click" Style="{DynamicResource BagButton}">
-                    <Button.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Button.RenderTransform>
 
 
-                    <Button.Background>
-                        <ImageBrush ImageSource="—Pngtree—fast shopping cart icon design_5537563.png" Stretch="UniformToFill"/>
-                    </Button.Background>
+                <DockPanel Margin="0,0,0,550">
+
+                    <TextBox TextWrapping="Wrap" Margin="460,20,0,47.4" Width="312" Style="{DynamicResource SearchTextBox}"/>
+
+                    <Button x:Name="Bag" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="40,-7,0,0" VerticalAlignment="Top" Width="163" Height="107" RenderTransformOrigin="0.5,0.5" Click="Bag_Click" Style="{DynamicResource BagButton}">
+                        <Button.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Button.RenderTransform>
+                        <Button.Background>
+                            <ImageBrush ImageSource="C:\Users\barte\source\repos\MusicShop\MusicShop\Images\—Pngtree—fast shopping cart icon design_5537563.png" Stretch="UniformToFill"/>
+                        </Button.Background>
+                    </Button>
+
+                    <Button x:Name="Letter" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="-790,1,0,0" VerticalAlignment="Top" Width="118" Height="101" RenderTransformOrigin="0.5,0.5" Style="{DynamicResource Letter2}" Click="Letter_Click">
+                        <Button.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Button.RenderTransform>
+                        <Button.Background>
+                            <ImageBrush ImageSource="letter1.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+
+                    <Button x:Name="Gift" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="-650,3,0,0" VerticalAlignment="Top" Width="78" Height="73" RenderTransformOrigin="0.5,0.5" Click="Gift_Click" Style="{DynamicResource Gift}">
+                        <Button.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Button.RenderTransform>
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/gift.png" Stretch="Uniform"/>
+                        </Button.Background>
 
 
+                    </Button>
 
-                </Button>
+                    <Button x:Name="User" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="-915,0,0,0" VerticalAlignment="Top" Width="101" Height="91" RenderTransformOrigin="0.5,0.5" Click="User_Click" Style="{DynamicResource User2}">
+                        <Button.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Button.RenderTransform>
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/user.png"/>
+                        </Button.Background>
+
+                    </Button>
+
+
+                </DockPanel>
 
 
             </Grid>
         </Border>
     </Border>
+
     <!--<Window.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
             <BeginStoryboard Storyboard="{StaticResource BagAnimation}"/>                           ODPALENIE APLIKACJI OD RAZU PO WLACZENIU

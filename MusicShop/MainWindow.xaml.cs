@@ -30,5 +30,20 @@ namespace MusicShop
         {
             ((Storyboard)Resources["BagAnimation"]).Begin();
         }
+
+        private void Letter_Click(object sender, RoutedEventArgs e)
+        {
+            ((Storyboard)Resources["LetterAnimation"]).Begin();
+        }
+
+        private void Gift_Click(object sender, RoutedEventArgs e)
+        {
+            ((Storyboard)Resources["GiftAnimation"]).Begin();
+        }
+
+        private void User_Click(object sender, RoutedEventArgs e)
+        {
+            ((Storyboard)Resources["UserAnimation"]).Begin();
+        }
     }
 }
