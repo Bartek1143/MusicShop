@@ -118,5 +118,20 @@
   <ItemGroup>
     <Resource Include="Images\user2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banner1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clothes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clothes2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clothes3.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
