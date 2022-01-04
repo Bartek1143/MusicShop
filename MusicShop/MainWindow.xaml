@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicShop"
+       
+        xmlns:vsc="clr-namespace:RegisterUserControl;assembly=RegisterUserControl"
         mc:Ignorable="d"
         Title="MainWindow" 
         Height="700" 
@@ -646,8 +648,9 @@
                     <GradientStop Color="DarkBlue" Offset="1.1"/>
                 </LinearGradientBrush>
             </Border.BorderBrush>
-
+            
             <Grid>
+               
 
                 <Grid.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -657,7 +660,10 @@
                         <GradientStop Color="DarkBlue" Offset="1.1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-
+                
+                <DockPanel>
+                    <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />
+                </DockPanel>
 
                 <DockPanel Margin="0,0,0,550">
 
@@ -727,31 +733,34 @@
                 <StackPanel Margin="0,120,720,330" >
                     <Button Height="40" Content="Home" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{DynamicResource ButtonMenuHome}"/>
                     <Button Height="40" Content="Tickets" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{DynamicResource ButtonMenuTickets}"/>
-                    <Button Height="40" Content="Accessories" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{DynamicResource ButtonMenuAccessories}"/>
+                    <Button x:Name="Accessories" Height="40" Content="Accessories" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{DynamicResource ButtonMenuAccessories}" Click="Accessories_Click"/>
                     <Button Height="40" Content="News" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{DynamicResource ButtonMenuNews}"/>
                     <Button Height="40" Content="Contact" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{DynamicResource ButtonMenuContact}"/>
 
                 </StackPanel>
+                <Grid Margin="160,150,300,120">
+                    <vsc:RegisterControl Margin="136,-12,-136.2,15.8" Visibility="Hidden" x:Name="RegisterPanel"/>
+                </Grid>
                 <Grid Margin="280,120,75,350">
-                    <Button Opacity="0.9" Style="{DynamicResource ButtonMainBanner}" >
+                    <Button x:Name="MainBanner" Opacity="0.9" Style="{DynamicResource ButtonMainBanner}" >
                         <Button.Background>
                             <ImageBrush ImageSource="Images/banner1.png"/>
                         </Button.Background>
                     </Button>
                 </Grid>
                 <Grid Margin="280,350,75,100" >
-                    <Button HorizontalAlignment="Right" Height="200" Margin="200,0,70,0" Width="164" Style="{DynamicResource ButtonTopProduct3}">
+                    <Button x:Name="CenterBannerButton3" HorizontalAlignment="Right" Height="200" Margin="200,0,70,0" Width="164" Style="{DynamicResource ButtonTopProduct3}">
                         <Button.Background>
                             <ImageBrush ImageSource="Images/clothes3.PNG" Stretch="UniformToFill"/>
                         </Button.Background>
 
                     </Button>
-                    <Button HorizontalAlignment="Right" Height="200" Margin="150,0,255,0" Width="164" Style="{DynamicResource ButtonTopProduct2}">
+                    <Button x:Name="CenterBannerButton1" HorizontalAlignment="Right" Height="200" Margin="150,0,255,0" Width="164" Style="{DynamicResource ButtonTopProduct2}">
                         <Button.Background>
                             <ImageBrush ImageSource="Images/clothes2.PNG" Stretch="UniformToFill"/>
                         </Button.Background>
                     </Button>
-                    <Button  HorizontalAlignment="Right" Height="200" Margin="0,0,440,0" Width="164" Style="{DynamicResource ButtonTopProduct1}">
+                    <Button x:Name="CenterBannerButton2" HorizontalAlignment="Right" Height="200" Margin="0,0,440,0" Width="164" Style="{DynamicResource ButtonTopProduct1}">
                         <Button.Background>
                             <ImageBrush ImageSource="Images/clothes1.png" Stretch="UniformToFill"/>
                         </Button.Background>

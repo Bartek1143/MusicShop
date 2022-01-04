@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
+using RegisterUserControl;
+
 
 namespace MusicShop
 {
@@ -21,9 +23,13 @@ namespace MusicShop
     /// </summary>
     public partial class MainWindow : Window
     {
+       
+
         public MainWindow()
         {
             InitializeComponent();
+            
+            
         }
 
         private void Bag_Click(object sender, RoutedEventArgs e)
@@ -44,6 +50,34 @@ namespace MusicShop
         private void User_Click(object sender, RoutedEventArgs e)
         {
             ((Storyboard)Resources["UserAnimation"]).Begin();
+            Register();
+
         }
+
+        private void Accessories_Click(object sender, RoutedEventArgs e)
+        {
+
+            NavigationWindow AccessoriesPage = new NavigationWindow();
+            AccessoriesPage.Source = new Uri("Pages/Products.xaml", UriKind.Relative);
+            AccessoriesPage.Show();
+            AccessoriesPage.Height = 750;  
+            this.Visibility = Visibility.Hidden;
+
+          
+        }
+
+        private void Register()
+        {
+           // RegisterControl register = new RegisterControl();
+            RegisterPanel.Visibility = Visibility.Visible;
+            MainBanner.Visibility = Visibility.Hidden;
+            CenterBannerButton1.Visibility = Visibility.Hidden;
+            CenterBannerButton2.Visibility = Visibility.Hidden;
+            CenterBannerButton3.Visibility =  Visibility.Hidden;
+           
+
+        }
+
+        
     }
 }
