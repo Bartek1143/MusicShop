@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicShop"
-       
+        xmlns:lg="clr-namespace:LoginUserControl;assembly=LoginUserControl"
         xmlns:vsc="clr-namespace:RegisterUserControl;assembly=RegisterUserControl"
+    
         mc:Ignorable="d"
         Title="MainWindow" 
         Height="700" 
@@ -627,6 +628,93 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <ImageBrush x:Key="exitregister" ImageSource="C:\Users\barte\source\repos\MusicShop\MusicShop\Images\exit2.png" Stretch="Fill"/>
+        <Style x:Key="ExitRegisterBtn" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource exitregister}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource exitregister}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource exitregister}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource exitregister}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <ImageBrush x:Key="ExitLogin" ImageSource="C:\Users\barte\source\repos\MusicShop\MusicShop\Images\exit2.png" Stretch="Fill" />
+        <Style x:Key="ExitLoginBtn" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource ExitLogin}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource ExitLogin}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource ExitLogin}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource ExitLogin}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="WelcomeTextBox" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="Cursor" Value="None"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="TextDecorations" Value="Underline"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Opacity" Value="0.3"/>
+            <Setter Property="OpacityMask" Value="Black"/>
+        </Style>
 
 
 
@@ -648,9 +736,9 @@
                     <GradientStop Color="DarkBlue" Offset="1.1"/>
                 </LinearGradientBrush>
             </Border.BorderBrush>
-            
+
             <Grid>
-               
+
 
                 <Grid.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -660,9 +748,9 @@
                         <GradientStop Color="DarkBlue" Offset="1.1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                
+
                 <DockPanel>
-                    <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />
+                    <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" Content="df" />
                 </DockPanel>
 
                 <DockPanel Margin="0,0,0,550">
@@ -711,7 +799,9 @@
                         </Button.Background>
 
 
+
                     </Button>
+                    <TextBlock x:Name="NameBtn"  Margin="-915,0,0,5.4" Width="101" Height="29" HorizontalAlignment="Left" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Style="{DynamicResource WelcomeTextBox}" />
 
                     <Button x:Name="User" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="-915,0,0,0" VerticalAlignment="Top" Width="101" Height="91" RenderTransformOrigin="0.5,0.5" Click="User_Click" Style="{DynamicResource User2}">
                         <Button.RenderTransform>
@@ -738,11 +828,36 @@
                     <Button Height="40" Content="Contact" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{DynamicResource ButtonMenuContact}"/>
 
                 </StackPanel>
-                <Grid Margin="190,150,320,120">
-                    <vsc:RegisterControl Margin="136,-12,-50,50" Visibility="Visible" x:Name="RegisterPanel"/>
+                <Grid Margin="190,132,319.8,134.8">
+                    <Button x:Name="ExitRegisterButton" Margin="116,-26,291,380" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ExitRegisterButton_Click" Style="{DynamicResource ExitRegisterBtn}" Visibility="Hidden">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/exit.png"/>
+                        </Button.Background>
+                    </Button>
+                    <vsc:RegisterControl Margin="136,-12,-50,50" Visibility="Hidden" x:Name="RegisterPanel"/>
+
                 </Grid>
+                <Grid  Margin="190,132,319.8,134.8">
+                    <Button x:Name="ExitLoginButton" Margin="113,38,288,308" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ExitLoginButton_Click"  Visibility="Hidden" RenderTransformOrigin="0.5,0.5" Style="{DynamicResource ExitLoginBtn}">
+                        <Button.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleY="0.676"/>
+                                <RotateTransform/>
+                                <TranslateTransform Y="0.255"/>
+                            </TransformGroup>
+                        </Button.RenderTransform>
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/exit.png"/>
+                        </Button.Background>
+                    </Button>
+                    <lg:LoginControl Margin="136,0,-50,50" Visibility="Hidden" x:Name="LoginPanel"/>
+                </Grid>
+
+
+
                 <Grid Margin="280,120,75,350">
-                    <Button x:Name="MainBanner" Opacity="0.9" Style="{DynamicResource ButtonMainBanner}" >
+                    <Button x:Name="MainBanner" Opacity="0.9" Style="{DynamicResource ButtonMainBanner}"  >
                         <Button.Background>
                             <ImageBrush ImageSource="Images/banner1.png"/>
                         </Button.Background>

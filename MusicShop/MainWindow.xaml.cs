@@ -17,6 +17,9 @@ using RegisterUserControl;
 using MusicShop.Client;
 using MusicShop.DB;
 using Microsoft.Identity.Client;
+using MusicShop;
+using MusicShop.LoginWindow;
+using LoginUserControl;
 
 namespace MusicShop
 {
@@ -30,8 +33,8 @@ namespace MusicShop
         public MainWindow()
         {
             InitializeComponent();
-            
-            
+           
+
         }
 
         private void Bag_Click(object sender, RoutedEventArgs e)
@@ -52,8 +55,24 @@ namespace MusicShop
         private void User_Click(object sender, RoutedEventArgs e)
         {
             ((Storyboard)Resources["UserAnimation"]).Begin();
-            Register();
+            LogOrRegWindow MenuWindow = new LogOrRegWindow();
+            MenuWindow.Show();
+            MenuWindow.SignInBtn.Click += SignInBtn_Click;
+            MenuWindow.RegisterInBtn.Click += RegisterInBtn_Click;
+            
 
+        }
+
+        private void RegisterInBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Register();
+        }
+
+        private void SignInBtn_Click(object sender, RoutedEventArgs e)
+        {
+            SignIn();
+            
+         
         }
 
         private void Accessories_Click(object sender, RoutedEventArgs e)
@@ -67,29 +86,65 @@ namespace MusicShop
 
           
         }
+        
+            
 
-        private void Register()
+        public void Register()
         {
            // RegisterControl register = new RegisterControl();
             RegisterPanel.Visibility = Visibility.Visible;
+            ExitRegisterButton.Visibility = Visibility.Visible;
             MainBanner.Visibility = Visibility.Hidden;
             CenterBannerButton1.Visibility = Visibility.Hidden;
             CenterBannerButton2.Visibility = Visibility.Hidden;
             CenterBannerButton3.Visibility =  Visibility.Hidden;
 
-            RegisterControl register = new RegisterControl();
+     
 
-            
         }
+
        
-
+        
         
 
-        
+        private void ExitRegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+   
+            RegisterPanel.Visibility = Visibility.Hidden;
+            ExitRegisterButton.Visibility = Visibility.Hidden;
+            MainBanner.Visibility = Visibility.Visible;
+            CenterBannerButton1.Visibility = Visibility.Visible;
+            CenterBannerButton2.Visibility = Visibility.Visible;
+            CenterBannerButton3.Visibility = Visibility.Visible;
+
+        }
+
+        public void SignIn()
+        {
+            LoginPanel.Visibility = Visibility.Visible;
+            ExitLoginButton.Visibility = Visibility.Visible;
+            MainBanner.Visibility = Visibility.Hidden;
+            CenterBannerButton1.Visibility = Visibility.Hidden;
+            CenterBannerButton2.Visibility = Visibility.Hidden;
+            CenterBannerButton3.Visibility = Visibility.Hidden;
+          
 
 
 
+        }
 
+        private void ExitLoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            NameBtn.Text = "User " + LoginPanel.Text;
+            ExitLoginButton.Visibility = Visibility.Hidden;
+            LoginPanel.Visibility = Visibility.Hidden;
+            MainBanner.Visibility = Visibility.Visible;
+            CenterBannerButton1.Visibility = Visibility.Visible;
+            CenterBannerButton2.Visibility = Visibility.Visible;
+            CenterBannerButton3.Visibility = Visibility.Visible;
+        }
 
+       
+       
     }
 }

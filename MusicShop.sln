@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterUserControl", "Regi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB", "DB\DB.csproj", "{3657235C-D658-4957-A190-8E94E63D937B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginUserControl", "LoginUserControl\LoginUserControl.csproj", "{DEB1B5D0-C9FE-40EC-B0EE-FF6E1361064D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterOrLoginUserControl", "RegisterOrLoginUserControl\RegisterOrLoginUserControl.csproj", "{16747AB5-4FF2-4396-A4D1-D51264CFCC53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{3657235C-D658-4957-A190-8E94E63D937B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3657235C-D658-4957-A190-8E94E63D937B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3657235C-D658-4957-A190-8E94E63D937B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEB1B5D0-C9FE-40EC-B0EE-FF6E1361064D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEB1B5D0-C9FE-40EC-B0EE-FF6E1361064D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEB1B5D0-C9FE-40EC-B0EE-FF6E1361064D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEB1B5D0-C9FE-40EC-B0EE-FF6E1361064D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16747AB5-4FF2-4396-A4D1-D51264CFCC53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16747AB5-4FF2-4396-A4D1-D51264CFCC53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16747AB5-4FF2-4396-A4D1-D51264CFCC53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16747AB5-4FF2-4396-A4D1-D51264CFCC53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

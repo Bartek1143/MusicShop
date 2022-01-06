@@ -9,7 +9,6 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MusicShop;
@@ -26,11 +25,15 @@ namespace RegisterUserControl
     /// </summary>
     public partial class RegisterControl : UserControl
     {
+      
+
         public RegisterControl()
         {
             InitializeComponent();
          
         }
+
+       
 
 
 
@@ -49,27 +52,25 @@ namespace RegisterUserControl
             Save.Address = AddressBox.Text;
             Save.Password = Password.Password;
             Save.Login = LoginBox.Text;
-            
-            
-
-
-
-            //ClientIMP connection = new ClientIMP();
-
+           
+           
             MusicShopDB db = new MusicShopDB();
             db.Clients.Add(Save);
             db.SaveChanges();
             RegisterControl register = new RegisterControl();
+
+            MessageBox.Show("Thank you for register, please shut the window", "Information", MessageBoxButton.OKCancel, MessageBoxImage.Information);
             
-           
-          
- 
-            
+
+
         }
 
-        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+    
+
+        public void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
             RegisterData();
+            
         }
     }
 }
