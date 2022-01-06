@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="400"
              >
-    <Border CornerRadius="52" BorderThickness="10" BorderBrush="White">
+    <Border CornerRadius="52" BorderThickness="10" BorderBrush="White" Margin="0,0,0,-176.6">
         <Border CornerRadius="35" BorderThickness="12">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -28,15 +28,28 @@
                         <GradientStop Color="DarkBlue" Offset="1.1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <StackPanel>
-                    <DockPanel Height="370" Margin="0,0,-0.2,0">
-                        <PasswordBox x:Name="Password" Margin="130,200,30,110" HorizontalAlignment="Center" Height="35" Width="195" CaretBrush="White" MaxLength="15"/>
-                        <TextBox x:Name="LoginBox" HorizontalAlignment="Left" Height="35" Margin="-225,124,30,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195"/>
-                    </DockPanel>
+                <StackPanel Margin="0,0,1.8,-0.8">
+                    
+                    <TextBox x:Name="NameBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" />
+                    <TextBox x:Name="SurnameBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                    <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                    <TextBox x:Name="AddressBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                    <TextBox x:Name="PhoneNumberBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                    <TextBox x:Name="AgeBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                    <PasswordBox x:Name="Password" Margin="100,20,0,0" HorizontalAlignment="Left" Height="35" Width="165" CaretBrush="White" MaxLength="15"/>
+                    <TextBox x:Name="LoginBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+
                 </StackPanel>
-                
-                <TextBlock HorizontalAlignment="Left" Margin="42,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"><Run FontStyle="Italic" FontSize="16" Text="Login"/></TextBlock>
-                <TextBlock HorizontalAlignment="Left" Margin="27,206,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Foreground="White" FontSize="16" FontStyle="Italic"/>
+
+                <TextBlock HorizontalAlignment="Left" Margin="27,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"><Run FontStyle="Italic" FontSize="16" Text="Login"/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Margin="27,360,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Foreground="White" FontSize="16" FontStyle="Italic"/>
+                <TextBlock HorizontalAlignment="Left" Margin="27,305,0,0" TextWrapping="Wrap" Text="Age" VerticalAlignment="Top" Foreground="White" FontSize="16" FontStyle="Italic"/>
+                <TextBlock HorizontalAlignment="Left" Margin="27,250,0,0" TextWrapping="Wrap" Text="Phone" VerticalAlignment="Top" Foreground="White" FontSize="16" FontStyle="Italic"/>
+                <TextBlock HorizontalAlignment="Left" Margin="27,195,0,0" TextWrapping="Wrap" Text="Adrress" VerticalAlignment="Top" Foreground="White" FontSize="16" FontStyle="Italic"/>
+                <TextBlock HorizontalAlignment="Left" Margin="27,140,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Foreground="White" FontSize="16" FontStyle="Italic"/>
+                <TextBlock HorizontalAlignment="Left" Margin="27,85,0,0" TextWrapping="Wrap" Text="Surname" VerticalAlignment="Top" Foreground="White" FontSize="16" FontStyle="Italic"/>
+                <TextBlock HorizontalAlignment="Left" Margin="27,30,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Foreground="White" FontSize="16" FontStyle="Italic"/>
+                <Button x:Name="RegisterButton" Content="Register In" HorizontalAlignment="Left" Height="21" Margin="100,456,0,0" VerticalAlignment="Top" Width="164" Background="#FF1B48E4" BorderBrush="{x:Null}" Opacity="0.5" Click="RegisterButton_Click"/>
             </Grid>
 
 

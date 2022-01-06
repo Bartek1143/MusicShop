@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicShop", "MusicShop\Musi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterUserControl", "RegisterUserControl\RegisterUserControl.csproj", "{14C77B77-9387-42BD-BCBC-5A988A5E2BC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB", "DB\DB.csproj", "{3657235C-D658-4957-A190-8E94E63D937B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{14C77B77-9387-42BD-BCBC-5A988A5E2BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14C77B77-9387-42BD-BCBC-5A988A5E2BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14C77B77-9387-42BD-BCBC-5A988A5E2BC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3657235C-D658-4957-A190-8E94E63D937B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3657235C-D658-4957-A190-8E94E63D937B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3657235C-D658-4957-A190-8E94E63D937B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3657235C-D658-4957-A190-8E94E63D937B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

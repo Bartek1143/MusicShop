@@ -189,13 +189,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Client\Client.cs" />
     <Compile Include="Client\IProducts.cs" />
     <Compile Include="Client\ShoppingCart.cs" />
     <Compile Include="Client\ProductsAdaptee.cs" />
     <Compile Include="Client\ProductsAdapter.cs" />
-    <Compile Include="DB\DbObject.cs" />
-    <Compile Include="DB\ProductsBase.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -206,7 +203,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB\MusicShopDB.cs" />
     <Compile Include="Pages\Products.xaml.cs">
       <DependentUpon>Products.xaml</DependentUpon>
     </Compile>
@@ -292,6 +288,10 @@
     <Resource Include="Images\TShirt2.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DB\DB.csproj">
+      <Project>{3657235c-d658-4957-a190-8e94e63d937b}</Project>
+      <Name>DB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RegisterUserControl\RegisterUserControl.csproj">
       <Project>{14c77b77-9387-42bd-bcbc-5a988a5e2bc2}</Project>
       <Name>RegisterUserControl</Name>

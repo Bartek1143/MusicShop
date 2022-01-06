@@ -12,6 +12,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MusicShop;
+using MusicShop.DB;
+
+
+
+
 
 namespace RegisterUserControl
 {
@@ -26,6 +32,44 @@ namespace RegisterUserControl
          
         }
 
-        
+
+
+
+        public void RegisterData()
+        {
+            Client Save = new Client();
+            Random random = new Random();
+
+            Save.Id = random.Next(1, 1000);
+            Save.Name = NameBox.Text;
+            Save.Surname = SurnameBox.Text;
+            Save.PhoneNumber = PhoneNumberBox.Text;
+            Save.Age = AgeBox.Text;
+            Save.Email = EmailBox.Text;
+            Save.Address = AddressBox.Text;
+            Save.Password = Password.Password;
+            Save.Login = LoginBox.Text;
+            
+            
+
+
+
+            //ClientIMP connection = new ClientIMP();
+
+            MusicShopDB db = new MusicShopDB();
+            db.Clients.Add(Save);
+            db.SaveChanges();
+            RegisterControl register = new RegisterControl();
+            
+           
+          
+ 
+            
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            RegisterData();
+        }
     }
 }

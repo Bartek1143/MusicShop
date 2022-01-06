@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MusicShop.DB
 {
-    public class ProductsBase
+    public class ProductsBase : DbObject
     {
         [Required]
         public string Name { get; set; }

@@ -9,6 +9,7 @@ namespace MusicShop.DB
 {
     public class DbObject
     {
+        [Key]
         public int Id { get; set; }
     }
 }

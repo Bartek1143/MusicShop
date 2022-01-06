@@ -738,8 +738,8 @@
                     <Button Height="40" Content="Contact" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Style="{DynamicResource ButtonMenuContact}"/>
 
                 </StackPanel>
-                <Grid Margin="160,150,300,120">
-                    <vsc:RegisterControl Margin="136,-12,-136.2,15.8" Visibility="Hidden" x:Name="RegisterPanel"/>
+                <Grid Margin="190,150,320,120">
+                    <vsc:RegisterControl Margin="136,-12,-50,50" Visibility="Visible" x:Name="RegisterPanel"/>
                 </Grid>
                 <Grid Margin="280,120,75,350">
                     <Button x:Name="MainBanner" Opacity="0.9" Style="{DynamicResource ButtonMainBanner}" >

@@ -1,8 +1,6 @@
 using System;
-using System.Data.Entity;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using MusicShop.Client;
 using MusicShop.DB;
 
 namespace MusicShop
@@ -20,17 +18,17 @@ namespace MusicShop
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
-        public virtual Microsoft.EntityFrameworkCore.DbSet<ShoppingCart> ShoppingCarts { get; set; }
+       // public virtual Microsoft.EntityFrameworkCore.DbSet<ShoppingCart> ShoppingCarts { get; set; }
        
         public virtual Microsoft.EntityFrameworkCore.DbSet<ProductsBase> Products { get; set; }
 
-         public virtual Microsoft.EntityFrameworkCore.DbSet<Client.Client> Clients { get; set; }
+         public virtual Microsoft.EntityFrameworkCore.DbSet<Client> Clients { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.UseSqlServer("Server=NT-27.WWSI.EDU.PL,1601;Database=KASETY_Z501_17;User Id=Z501_17;Password=Z501_17;");
+            optionsBuilder.UseSqlServer("Server=NT-27.WWSI.EDU.PL,1601;Database=KASETY_501_17;User Id=Z501_17;Password=Z501_17;");
         } 
        
 

@@ -14,7 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using RegisterUserControl;
-
+using MusicShop.Client;
+using MusicShop.DB;
+using Microsoft.Identity.Client;
 
 namespace MusicShop
 {
@@ -74,10 +76,20 @@ namespace MusicShop
             CenterBannerButton1.Visibility = Visibility.Hidden;
             CenterBannerButton2.Visibility = Visibility.Hidden;
             CenterBannerButton3.Visibility =  Visibility.Hidden;
-           
 
+            RegisterControl register = new RegisterControl();
+
+            
         }
+       
 
         
+
+        
+
+
+
+
+
     }
 }

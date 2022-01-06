@@ -6,26 +6,33 @@ using System.Text;
 using System.Threading.Tasks;
 using MusicShop.DB;
 
-namespace MusicShop.Client
+namespace MusicShop.DB
 {
     public class Client : DbObject
     {
-        [Required]
+       
+        
         [MaxLength(30)]
         public string Surname { get; set; }
 
-        [Required]
-        [MaxLength(15)]
+         
+         [MaxLength(15)]
         public string Name { get; set; }
 
+        
         [Required]
         public string Email { get; set; }
 
+        
+        public string Address { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+        public string Age { get; set; }
+
         [Required]
-        protected string Address { get; }
-
-        public int PhoneNumber { get; set; }
-
-        public int Age { get; set; }
+        public string Password { get; set; }
+        [Required]
+        public string Login { get; set; }
     }
 }
