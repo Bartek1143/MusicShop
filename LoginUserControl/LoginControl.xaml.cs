@@ -28,7 +28,7 @@ namespace LoginUserControl
             
         }
 
-        private void Login()
+        public void Login()
         {
             //Client Compare = new Client();
             //IConnection connection = new ClientIMP();
@@ -54,24 +54,26 @@ namespace LoginUserControl
 
         }
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        public void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             Login();
         }
 
-        public event EventHandler TextChanged;
+       
 
-      //  private string text;
+      
+
+        public string login;
 
         public string Text
         {
             get { return LoginBox.Text; }
-            set { value = LoginBox.Text ; }
+            set { value = login ; }
         }
 
-        private void LoginBox_TextChanged(object sender, TextChangedEventArgs e)
+        public void LoginBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+            login = LoginBox.Text;
         }
     }
 }

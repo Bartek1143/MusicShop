@@ -4,12 +4,17 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Castle.Components.DictionaryAdapter;
+using Microsoft.EntityFrameworkCore;
 using MusicShop.DB;
 
 namespace MusicShop.DB
 {
-    public class Client : DbObject
+    public class Client :DbObject
     {
+        //[Required]
+        //[System.ComponentModel.DataAnnotations.Key]
+        //public int Id { get; set; }
        
         
         [MaxLength(30)]

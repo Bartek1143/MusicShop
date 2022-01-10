@@ -27,7 +27,7 @@
                     </LinearGradientBrush>
                 </Grid.Background>
                 <StackPanel Margin="107,0,2,-0.2">
-                    <TextBox x:Name="LoginBox" HorizontalAlignment="Left" Height="35" Margin="10,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" TextChanged="LoginBox_TextChanged"/>
+                    <TextBox x:Name="LoginBox" HorizontalAlignment="Left" Height="35" Margin="10,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" />
                     <PasswordBox x:Name="Password" Margin="10,20,0,0" HorizontalAlignment="Left" Height="35" Width="165" CaretBrush="White" MaxLength="15"/>
 
 

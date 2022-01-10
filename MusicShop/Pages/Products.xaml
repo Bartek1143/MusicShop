@@ -188,9 +188,9 @@
 
                 </DockPanel>
                 <Grid Margin="60,120,60,40" >
-                    <Button HorizontalAlignment="Right" Height="200" Margin="200,0,290,270" Width="164" BorderBrush="#FF434343"  Foreground="{x:Null}" Opacity="0.34">
+                    <Button x:Name="Tshirt3Btn" HorizontalAlignment="Right" Height="200" Margin="200,0,290,270" Width="164" BorderBrush="{x:Null}"  Foreground="{x:Null}" Click="Tshirt3Btn_Click">
                         <Button.Background>
-                            <ImageBrush ImageSource="/MusicShop;component/Images/Soon.png" Stretch="Uniform"/>
+                            <ImageBrush ImageSource="/MusicShop;component/Images/clothes1.png" Stretch="UniformToFill"/>
                         </Button.Background>
 
                     </Button>
@@ -199,18 +199,19 @@
                             <ImageBrush ImageSource="/MusicShop;component/Images/Soon.png" Stretch="Uniform"/>
                         </Button.Background>
                     </Button>
-                    <Button HorizontalAlignment="Right" Height="200" Margin="150,0,475,270" Width="164" BorderBrush="{x:Null}" Foreground="{x:Null}" >
+                    <Button x:Name="Tshirt2Btn" HorizontalAlignment="Right" Height="200" Margin="150,0,475,270" Width="164" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Tshirt2Btn_Click" >
                         <Button.Background>
                             <ImageBrush ImageSource="/MusicShop;component/Images/clothes3.PNG" Stretch="UniformToFill"/>
                         </Button.Background>
 
                     </Button>
-                    <Button  HorizontalAlignment="Right" Height="200" Margin="0,0,660,270" Width="164" BorderBrush="{x:Null}" Foreground="{x:Null}" >
+                    <Button x:Name="TShirt1Btn"  HorizontalAlignment="Right" Height="200" Margin="0,0,660,270" Width="164" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="TShirt1Btn_Click"  >
                         <Button.Background>
                             <ImageBrush ImageSource="/MusicShop;component/Images/clothes2.PNG" Stretch="UniformToFill"/>
                         </Button.Background>
 
                     </Button>
+                 
                     <!-- Next Series Of Buttons -->
                     <Button HorizontalAlignment="Right" Height="200" Margin="200,0,290,-270" Width="164" Opacity="0.34">
                         <Button.Background>
@@ -236,6 +237,29 @@
 
 
                 </Grid>
+                <Grid x:Name="Product1Grid"  Margin="350,60,350,100" Visibility="Hidden" MouseLeave="Product1Grid_MouseLeave">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/MusicShop;component/Images/clothes2.PNG" Stretch="Uniform"/>
+                    </Grid.Background>
+                    <TextBlock x:Name="Product1Tbx" Margin="30,450,30,-0.2" TextAlignment="Center" FontWeight="Bold" Background="White" Opacity="0.5" />
+                    
+                </Grid>
+
+                <Grid x:Name="Product2Grid"  Margin="350,60,350,100" Visibility="Hidden" MouseLeave="Product2Grid_MouseLeave">
+                    <Grid.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/MusicShop;component/Images/clothes3.PNG"/>
+                    </Grid.Background>
+                    <TextBlock x:Name="Product2Tbx" Margin="35,450,35,-0.2" TextAlignment="Center" FontWeight="Bold" Background="White" Opacity="0.5" />
+                </Grid>
+
+                <Grid x:Name="Product3Grid"  Margin="350,60,350,100" Visibility="Hidden" MouseLeave="Product3Grid_MouseLeave" >
+                    <Grid.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/MusicShop;component/Images/clothes1.png"/>
+                    </Grid.Background>
+
+                    <TextBlock x:Name="Product3Tbx" Margin="25,450,25,-0.2" TextAlignment="Center" FontWeight="Bold" Background="White" Opacity="0.5" />
+                </Grid>
+
 
 
             </Grid>

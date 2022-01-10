@@ -20,6 +20,7 @@ using Microsoft.Identity.Client;
 using MusicShop;
 using MusicShop.LoginWindow;
 using LoginUserControl;
+using MusicShop.Windows;
 
 namespace MusicShop
 {
@@ -33,13 +34,15 @@ namespace MusicShop
         public MainWindow()
         {
             InitializeComponent();
-           
+            
 
         }
 
         private void Bag_Click(object sender, RoutedEventArgs e)
         {
             ((Storyboard)Resources["BagAnimation"]).Begin();
+            ShoppingBasket shoppingBasketWindow = new ShoppingBasket();
+            shoppingBasketWindow.Show();
         }
 
         private void Letter_Click(object sender, RoutedEventArgs e)
@@ -59,6 +62,7 @@ namespace MusicShop
             MenuWindow.Show();
             MenuWindow.SignInBtn.Click += SignInBtn_Click;
             MenuWindow.RegisterInBtn.Click += RegisterInBtn_Click;
+            
             
 
         }
@@ -135,14 +139,17 @@ namespace MusicShop
 
         private void ExitLoginButton_Click(object sender, RoutedEventArgs e)
         {
-            NameBtn.Text = "User " + LoginPanel.Text;
+            NameBtn.Text = /* "User " +*/ LoginPanel.Text;
             ExitLoginButton.Visibility = Visibility.Hidden;
             LoginPanel.Visibility = Visibility.Hidden;
             MainBanner.Visibility = Visibility.Visible;
             CenterBannerButton1.Visibility = Visibility.Visible;
             CenterBannerButton2.Visibility = Visibility.Visible;
             CenterBannerButton3.Visibility = Visibility.Visible;
+            
         }
+
+       
 
        
        
