@@ -16,6 +16,11 @@ namespace DiscountService
         [OperationContract]
         int CountDiscount(int Price, int Discount);
 
+      
+          
+            
+        
+
         // TODO: Add your service operations here
     }
 

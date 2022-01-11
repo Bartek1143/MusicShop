@@ -21,6 +21,7 @@ using MusicShop;
 using MusicShop.LoginWindow;
 using LoginUserControl;
 using MusicShop.Windows;
+using System.Diagnostics;
 
 namespace MusicShop
 {
@@ -52,15 +53,15 @@ namespace MusicShop
        private void Gift_Click(object sender, RoutedEventArgs e)
         {
             ((Storyboard)Resources["GiftAnimation"]).Begin();
-            ShoppingBasket shoppingBasketWindow = new ShoppingBasket();
-            shoppingBasketWindow.Show();
+            Orders OrderstWindow = new Orders();
+            OrderstWindow.Show();
         }
 
         private void PreviousOrders_Click(object sender, RoutedEventArgs e)
         {
             ((Storyboard)Resources["GiftAnimation"]).Begin();
-            ShoppingBasket shoppingBasketWindow = new ShoppingBasket();
-            shoppingBasketWindow.Show();
+            Orders OrdersWindow = new Orders();
+            OrdersWindow.Show();
         }
 
         private void User_Click(object sender, RoutedEventArgs e)
@@ -158,6 +159,84 @@ namespace MusicShop
             
         }
 
-      
+        private void CenterBannerButton2_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationWindow AccessoriesPage = new NavigationWindow();
+            AccessoriesPage.Source = new Uri("Pages/Products.xaml", UriKind.Relative);
+            AccessoriesPage.Show();
+            AccessoriesPage.Height = 750;
+            this.Visibility = Visibility.Hidden;
+
+         
+        }
+
+        private void CenterBannerButton1_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationWindow AccessoriesPage = new NavigationWindow();
+            AccessoriesPage.Source = new Uri("Pages/Products.xaml", UriKind.Relative);
+            AccessoriesPage.Show();
+            AccessoriesPage.Height = 750;
+            this.Visibility = Visibility.Hidden;
+        }
+
+        private void CenterBannerButton3_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationWindow AccessoriesPage = new NavigationWindow();
+            AccessoriesPage.Source = new Uri("Pages/Products.xaml", UriKind.Relative);
+            AccessoriesPage.Show();
+            AccessoriesPage.Height = 750;
+            this.Visibility = Visibility.Hidden;
+        }
+
+        private void Tickets_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Currently we don't have any tickets.", "Information", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void Contact_Click(object sender, RoutedEventArgs e)
+        {
+            ContactGrid.Visibility = Visibility.Visible;
+            MainBanner.Visibility = Visibility.Hidden;
+            CenterBannerButton1.Visibility = Visibility.Hidden;
+            CenterBannerButton2.Visibility = Visibility.Hidden;
+            CenterBannerButton3.Visibility = Visibility.Hidden;
+            OpeningGrid.Visibility = Visibility.Hidden;
+
+        }
+
+
+
+        private void FB_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/oolinek");
+        }
+
+        private void GM_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("bartlomiej.olesinski2@gmail.com", "Email", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void LK_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.linkedin.com/in/bart%C5%82omiej-olesi%C5%84ski-a72ab0192/"); 
+        }
+
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            ContactGrid.Visibility = Visibility.Hidden;
+            MainBanner.Visibility = Visibility.Visible;
+            CenterBannerButton1.Visibility = Visibility.Visible;
+            CenterBannerButton2.Visibility = Visibility.Visible;
+            CenterBannerButton3.Visibility = Visibility.Visible;
+            OpeningGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void News_Click(object sender, RoutedEventArgs e)
+        {
+            OpeningGrid.Visibility = Visibility.Visible;
+            MainBanner.Visibility = Visibility.Hidden;
+                
+        }
     }
 }

@@ -37,8 +37,8 @@
                     <TextBlock HorizontalAlignment="Left" Margin="30,14,20,20" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Foreground="White" FontSize="16" FontStyle="Italic" />
 
                 </StackPanel>
-                <StackPanel Margin="115,135,75,-0.2">
-                    <Button x:Name="LoginButton" Content="Sign In" HorizontalAlignment="Left" Height="21"  VerticalAlignment="Top" Width="167" Background="#FF1B48E4" BorderBrush="{x:Null}" Opacity="0.5" Click="LoginButton_Click" Margin="0,0,-0.6,0"/>
+                <StackPanel Margin="115,135,40,-0.2">
+                    <Button x:Name="LoginButton" Content="Sign In" Height="21"  VerticalAlignment="Top" Background="#FF1B48E4" BorderBrush="{x:Null}" Opacity="0.5" Click="LoginButton_Click" />
                 </StackPanel>
 
 

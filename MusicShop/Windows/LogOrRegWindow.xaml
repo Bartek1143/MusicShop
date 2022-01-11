@@ -32,7 +32,8 @@
                     </LinearGradientBrush>
                 </Grid.Background>
                 <DockPanel Margin="60,30,80,30">
-                    <Image Source="C:\Users\barte\source\repos\MusicShop\LoginUserControl\Images\registerNow.png" Margin="-60,60,110,19.6" Width="59" />
+                    <Image Source="/MusicShop;component/Images/registerNow.png" Margin="-60,60,110,19.6" Width="59" />
+                 
                 </DockPanel>
 
 

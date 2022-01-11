@@ -15,8 +15,7 @@ namespace MusicShop.DB
 
         public decimal Price { get; set; }
 
-        //[ForeignKey("ShoppingCart")]
-        //public int? ShoppingCartId { get; set; }
+      
      
 
     }

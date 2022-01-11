@@ -48,7 +48,7 @@
         <SolidColorBrush x:Key="Button.MouseOver.Background2" Color="#FFBEE6FD"/>
         <SolidColorBrush x:Key="Button.Pressed.Background2" Color="#FFC4E5F6"/>
 
-        <ImageBrush x:Key="Bag" ImageSource="C:\Users\barte\source\repos\MusicShop\MusicShop\Images\BagOnMouseOver.png" Stretch="Uniform"/>
+        <ImageBrush x:Key="Bag" ImageSource="/MusicShop;component/Images/BagOnMouseOver.png" Stretch="Uniform"/>
         <Style x:Key="Bag2" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
@@ -87,7 +87,7 @@
             </Setter>
         </Style>
 
-        <ImageBrush x:Key="Return" ImageSource="C:\Users\barte\source\repos\MusicShop\MusicShop\Images\Return2.png" Stretch="Uniform" />
+        <ImageBrush x:Key="Return" ImageSource="/MusicShop;component/Images/Return2.png" Stretch="Uniform" />
         <Style x:Key="Return2" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
@@ -270,6 +270,112 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="Tshirt1Btn" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Opacity" Value="0.4"/>
+
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Opacity" Value="0.4"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="Tshirt2Btn" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Opacity" Value="0.4"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Opacity" Value="0.4"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="Tshirt3Btn" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Opacity" Value="0.4"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Opacity" Value="0.4"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Page.Resources>
     <Page.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
@@ -333,14 +439,14 @@
 
                 </DockPanel>
                 <Grid Margin="60,120,60,40" >
-                    <Button x:Name="Tshirt3Btn" HorizontalAlignment="Right" Height="200" Margin="200,0,290,270" Width="164" BorderBrush="{x:Null}"  Foreground="{x:Null}" Click="Tshirt3Btn_Click">
+                    <Button x:Name="Tshirt3Btn" HorizontalAlignment="Right" Height="200" Margin="200,0,290,270" Width="164" BorderBrush="{x:Null}"  Foreground="{x:Null}" Click="Tshirt3Btn_Click" Style="{DynamicResource Tshirt3Btn}">
                         <Button.Background>
                             <ImageBrush ImageSource="/MusicShop;component/Images/clothes1.png" Stretch="UniformToFill"/>
                         </Button.Background>
 
                     </Button>
 
-                    <Button x:Name="BuyNowBtn3"  Height="35" Width="140"  BorderBrush="{x:Null}"   Style="{DynamicResource BuyNow3Btn}" Margin="80,20,-150,20" >
+                    <Button x:Name="BuyNowBtn3"  Height="35" Width="140"  BorderBrush="{x:Null}"   Style="{DynamicResource BuyNow3Btn}" Margin="80,20,-150,20" Click="BuyNowBtn3_Click" >
                         <Button.Background>
                             <ImageBrush ImageSource="/MusicShop;component/Images/BuyNow.png" Stretch="UniformToFill"/>
                         </Button.Background>
@@ -357,20 +463,20 @@
                             <ImageBrush ImageSource="/MusicShop;component/Images/Soon.png" Stretch="Uniform"/>
                         </Button.Background>
                     </Button>
-                    <Button x:Name="Tshirt2Btn" HorizontalAlignment="Right" Height="200" Margin="150,0,475,270" Width="164" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Tshirt2Btn_Click" >
+                    <Button x:Name="Tshirt2Btn" HorizontalAlignment="Right" Height="200" Margin="150,0,475,270" Width="164" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Tshirt2Btn_Click" Style="{DynamicResource Tshirt2Btn}" >
                         <Button.Background>
                             <ImageBrush ImageSource="/MusicShop;component/Images/clothes3.PNG" Stretch="UniformToFill"/>
                         </Button.Background>
 
                     </Button>
 
-                    <Button x:Name="BuyNowBtn2" Height="35"  Width="140"   BorderBrush="{x:Null}"   Style="{DynamicResource BuyNow2Btn}" Margin="0,20,150,20" >
+                    <Button x:Name="BuyNowBtn2" Height="35"  Width="140"   BorderBrush="{x:Null}"   Style="{DynamicResource BuyNow2Btn}" Margin="0,20,150,20" Click="BuyNowBtn2_Click" >
                         <Button.Background>
                             <ImageBrush Stretch="UniformToFill" ImageSource="/MusicShop;component/Images/BuyNow.png"/>
                         </Button.Background>
                     </Button>
 
-                    <Button x:Name="TShirt1Btn"  HorizontalAlignment="Right" Height="200" Margin="0,0,660,270" Width="164" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="TShirt1Btn_Click"  >
+                    <Button x:Name="TShirt1Btn"  HorizontalAlignment="Right" Height="200" Margin="0,0,660,270" Width="164" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="TShirt1Btn_Click" Style="{DynamicResource Tshirt1Btn}"  >
                         <Button.Background>
                             <ImageBrush ImageSource="/MusicShop;component/Images/clothes2.PNG" Stretch="UniformToFill"/>
                         </Button.Background>

@@ -28,7 +28,7 @@ namespace MusicShop
     /// </summary>
     public partial class Products : Page
     {
-        ServiceHost host;
+       
 
         public Products()
         {
@@ -36,7 +36,7 @@ namespace MusicShop
             InitializeComponent();
 
             
-            host = new ServiceHost(typeof(Service1Client), new Uri("http://localhost:2698/Service1.svc"));
+            
 
             
          
@@ -69,6 +69,7 @@ namespace MusicShop
             
 
         }
+
 
         private void Tshirt2Btn_Click(object sender, RoutedEventArgs e)
         {
@@ -142,6 +143,15 @@ namespace MusicShop
           
         }
 
-      
+        private void BuyNowBtn2_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Product has been update in you basket", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+
+        }
+
+        private void BuyNowBtn3_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Product has been update in you basket", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
     }
 }

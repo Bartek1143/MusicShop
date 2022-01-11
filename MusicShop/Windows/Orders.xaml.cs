@@ -27,9 +27,9 @@ namespace MusicShop.Windows
     /// <summary>
     /// Interaction logic for ShoppingCart.xaml
     /// </summary>
-    public partial class ShoppingBasket : Window
+    public partial class Orders : Window
     {
-        public ShoppingBasket()
+        public Orders()
         {
             InitializeComponent();
            
@@ -44,6 +44,7 @@ namespace MusicShop.Windows
             MusicShopDB db = new MusicShopDB();
             MainWindow window = new MainWindow();
           
+           
 
 
             var resultName = db.Clients.Where(x => x.Login == Lg1.Text).Select(n => n.Name).FirstOrDefault().ToString();
@@ -77,8 +78,12 @@ namespace MusicShop.Windows
             DB.Client client = new DB.Client();
 
 
+            var check = db.Clients.Where(x => x.Login == Lg1.Text).FirstOrDefault().ToString();
+            {
 
-            var query = db.Orders.Join
+
+
+                var query = db.Orders.Join
                 (
                 db.Products, p => p.ProductId, o => o.Id, (r, p) => new
                 {
@@ -88,18 +93,26 @@ namespace MusicShop.Windows
                     p.Price
                 }
                 )
-                .Join(db.Clients, b => b.clientId, c => c.Id, (c, b) => new
+                /* .Join(db.Clients, b => b.clientId, c => c.Id, (c, b) => new
+                 {
+                     b.Name,
+                     b.Surname,
+                     c.ProductName,
+                     c.Price
+                 })*/
+                .Join(db.Clients, b => Lg1.Text, c => c.Login, (c, b) => new
                 {
                     b.Name,
-                    b.Surname, 
+                    b.Surname,
                     c.ProductName,
                     c.Price
-                }).ToList();
-            //OrderTbx.Text = query.ToString();
+                }).ToList().Take(5);
+               
 
-           // OrderGridView.DataContext = query;
-            DataGridOrder.ItemsSource = query;
-            
+
+                DataGridOrder.ItemsSource = query;
+
+            };
             
 
            
@@ -125,6 +138,11 @@ namespace MusicShop.Windows
             DetailsStpn2.Visibility = Visibility.Visible;
             DetailsStpnl.Visibility = Visibility.Visible;
             Order();
+        }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 

@@ -206,8 +206,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ShoppingBasket.xaml.cs">
-      <DependentUpon>ShoppingBasket.xaml</DependentUpon>
+    <Compile Include="Windows\Orders.xaml.cs">
+      <DependentUpon>Orders.xaml</DependentUpon>
     </Compile>
     <Page Include="Windows\LogOrRegWindow.xaml">
       <SubType>Designer</SubType>
@@ -236,7 +236,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\ShoppingBasket.xaml">
+    <Page Include="Windows\Orders.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -395,6 +395,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\DISCOUNT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\registerNow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\OpeningSoon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -295,10 +295,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client\ClientIMP.cs" />
     <Compile Include="Client\Client.cs" />
     <Compile Include="Client\DbObject.cs" />
-    <Compile Include="Client\IConnection.cs" />
     <Compile Include="Client\MusicShopDB.cs" />
     <Compile Include="Products\Order.cs" />
     <Compile Include="Products\ProductsBase.cs" />
