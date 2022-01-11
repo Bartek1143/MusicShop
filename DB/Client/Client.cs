@@ -12,9 +12,7 @@ namespace MusicShop.DB
 {
     public class Client :DbObject
     {
-        //[Required]
-        //[System.ComponentModel.DataAnnotations.Key]
-        //public int Id { get; set; }
+        
        
         
         [MaxLength(30)]

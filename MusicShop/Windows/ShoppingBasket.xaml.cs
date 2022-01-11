@@ -19,7 +19,7 @@ using MusicShop;
 using MusicShop.LoginWindow;
 using LoginUserControl;
 using System.Security.Permissions;
-
+using DB.Products;
 
 
 namespace MusicShop.Windows
@@ -32,6 +32,7 @@ namespace MusicShop.Windows
         public ShoppingBasket()
         {
             InitializeComponent();
+           
 
         }
 
@@ -65,6 +66,57 @@ namespace MusicShop.Windows
 
 
         }
+        
+        private void Order()
+        {
+            MusicShopDB db = new MusicShopDB();
+            Order order = new Order();
+            LoginControl loginControl = new LoginControl();
+            MainWindow main = new MainWindow();
+            ProductsBase products = new ProductsBase();
+            DB.Client client = new DB.Client();
+
+
+
+            var query = db.Orders.Join
+                (
+                db.Products, p => p.ProductId, o => o.Id, (r, p) => new
+                {
+                    r.clientId,
+                    r.ProductId,
+                    p.ProductName,
+                    p.Price
+                }
+                )
+                .Join(db.Clients, b => b.clientId, c => c.Id, (c, b) => new
+                {
+                    b.Name,
+                    b.Surname, 
+                    c.ProductName,
+                    c.Price
+                }).ToList();
+            //OrderTbx.Text = query.ToString();
+
+           // OrderGridView.DataContext = query;
+            DataGridOrder.ItemsSource = query;
+            
+            
+
+           
+
+
+
+         
+                
+
+                
+               
+
+
+
+            
+                          
+        }
 
         private void ContinueBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -72,6 +124,7 @@ namespace MusicShop.Windows
             LogStckPnl.Visibility = Visibility.Hidden;
             DetailsStpn2.Visibility = Visibility.Visible;
             DetailsStpnl.Visibility = Visibility.Visible;
+            Order();
         }
     }
 

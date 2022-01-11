@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using DB.Products;
 using Microsoft.EntityFrameworkCore;
 using MusicShop.DB;
 
@@ -23,6 +24,8 @@ namespace MusicShop
         public virtual Microsoft.EntityFrameworkCore.DbSet<ProductsBase> Products { get; set; }
 
          public virtual Microsoft.EntityFrameworkCore.DbSet<Client> Clients { get; set; }
+
+        public virtual Microsoft.EntityFrameworkCore.DbSet<Order> Orders { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

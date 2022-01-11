@@ -785,7 +785,7 @@
                         </Button.Background>
                     </Button>
 
-                    <Button x:Name="Gift" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="-650,3,0,0" VerticalAlignment="Top" Width="78" Height="73" RenderTransformOrigin="0.5,0.5" Click="Gift_Click" Style="{DynamicResource Gift}">
+                    <Button x:Name="Gift" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="-650,3,0,0" VerticalAlignment="Top" Width="78" Height="73" RenderTransformOrigin="0.5,0.5" Style="{DynamicResource Gift}" Click="Gift_Click">
                         <Button.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>

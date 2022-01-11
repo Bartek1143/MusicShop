@@ -40,10 +40,10 @@ namespace RegisterUserControl
 
         public void RegisterData()
         {
+            MusicShopDB db = new MusicShopDB();
             Client Save = new Client();
-            Random random = new Random();
-
-            Save.Id = random.Next(1, 1000);
+            
+            // automatically increment of Id
             Save.Name = NameBox.Text;
             Save.Surname = SurnameBox.Text;
             Save.PhoneNumber = PhoneNumberBox.Text;
@@ -52,9 +52,11 @@ namespace RegisterUserControl
             Save.Address = AddressBox.Text;
             Save.Password = Password.Password;
             Save.Login = LoginBox.Text;
+
            
            
-            MusicShopDB db = new MusicShopDB();
+           
+           
             db.Clients.Add(Save);
             db.SaveChanges();
             RegisterControl register = new RegisterControl();

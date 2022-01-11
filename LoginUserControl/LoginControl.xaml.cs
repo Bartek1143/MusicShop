@@ -35,6 +35,7 @@ namespace LoginUserControl
             //List<Client> clients = connection.ReturnList();
 
             MusicShopDB db = new MusicShopDB();
+            
 
             var result = db.Clients.Any(x => x.Login == LoginBox.Text && x.Password == Password.Password);
                 {

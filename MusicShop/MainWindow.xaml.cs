@@ -41,8 +41,7 @@ namespace MusicShop
         private void Bag_Click(object sender, RoutedEventArgs e)
         {
             ((Storyboard)Resources["BagAnimation"]).Begin();
-            ShoppingBasket shoppingBasketWindow = new ShoppingBasket();
-            shoppingBasketWindow.Show();
+           
         }
 
         private void Letter_Click(object sender, RoutedEventArgs e)
@@ -50,9 +49,18 @@ namespace MusicShop
             ((Storyboard)Resources["LetterAnimation"]).Begin();
         }
 
-        private void Gift_Click(object sender, RoutedEventArgs e)
+       private void Gift_Click(object sender, RoutedEventArgs e)
         {
             ((Storyboard)Resources["GiftAnimation"]).Begin();
+            ShoppingBasket shoppingBasketWindow = new ShoppingBasket();
+            shoppingBasketWindow.Show();
+        }
+
+        private void PreviousOrders_Click(object sender, RoutedEventArgs e)
+        {
+            ((Storyboard)Resources["GiftAnimation"]).Begin();
+            ShoppingBasket shoppingBasketWindow = new ShoppingBasket();
+            shoppingBasketWindow.Show();
         }
 
         private void User_Click(object sender, RoutedEventArgs e)
@@ -141,17 +149,15 @@ namespace MusicShop
         {
             NameBtn.Text = /* "User " +*/ LoginPanel.Text;
             ExitLoginButton.Visibility = Visibility.Hidden;
-            LoginPanel.Visibility = Visibility.Hidden;
+            LoginPanel.Visibility = Visibility.Hidden; 
             MainBanner.Visibility = Visibility.Visible;
             CenterBannerButton1.Visibility = Visibility.Visible;
             CenterBannerButton2.Visibility = Visibility.Visible;
             CenterBannerButton3.Visibility = Visibility.Visible;
             
+            
         }
 
-       
-
-       
-       
+      
     }
 }

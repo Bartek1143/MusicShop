@@ -300,7 +300,8 @@
     <Compile Include="Client\DbObject.cs" />
     <Compile Include="Client\IConnection.cs" />
     <Compile Include="Client\MusicShopDB.cs" />
-    <Compile Include="Client\ProductsBase.cs" />
+    <Compile Include="Products\Order.cs" />
+    <Compile Include="Products\ProductsBase.cs" />
     <Compile Include="Migrations\20220110154020_Init.cs" />
     <Compile Include="Migrations\20220110154020_Init.designer.cs">
       <DependentUpon>20220110154020_Init.cs</DependentUpon>

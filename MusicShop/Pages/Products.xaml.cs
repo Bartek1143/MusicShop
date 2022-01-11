@@ -13,7 +13,9 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DB.Products;
 using MusicShop.Pages;
+using LoginUserControl;
 
 namespace MusicShop
 {
@@ -26,7 +28,9 @@ namespace MusicShop
 
         public Products()
         {
+           
             InitializeComponent();
+         
         }
 
         private void Bag_Click(object sender, RoutedEventArgs e)
@@ -92,19 +96,42 @@ namespace MusicShop
             Product3Grid.Visibility = Visibility.Hidden;
         }
 
+        private void BuyNowBtn1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Product has been update in you basket", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            MusicShopDB db = new MusicShopDB();
+
+            Order SaveOrder = new Order();
+
+            MainWindow main = new MainWindow();
+
+            LoginControl loginControl = new LoginControl();
+
+            //  var result = db.Clients.Where(x => x.Login == main.LoginPanel.Text).Select(x => x.Id).FirstOrDefault();
+
+
+
+            var result2 = db.Clients.Where(x => x.Login == main.LoginPanel.Text).Select(x => x.Id).SingleOrDefault();
+
+            txtbtn.Text = result2.ToString();
+
+            
+
+            SaveOrder.clientId = result2;
+            SaveOrder.ProductId = 1;
+
+            db.Orders.Add(SaveOrder);
+            db.SaveChanges();
+            
+        }
 
 
 
 
 
 
-        //private void Parameters1tblx_TargetUpdated(object sender, DataTransferEventArgs e)
-        //{
-        //    Tshirt tshirt = new Tshirt();
 
-        //    int Polyester = tshirt.Polyester;
-
-        //    Parameters1tblx.Text = Polyester.ToString();
-        //}
+        
     }
 }
