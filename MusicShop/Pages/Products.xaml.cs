@@ -16,6 +16,10 @@ using System.Windows.Shapes;
 using DB.Products;
 using MusicShop.Pages;
 using LoginUserControl;
+using MusicShop.DiscountServiceReference;
+using System.ServiceModel;
+using System.ServiceModel.Description;
+using System.Threading;
 
 namespace MusicShop
 {
@@ -24,12 +28,17 @@ namespace MusicShop
     /// </summary>
     public partial class Products : Page
     {
-       
+        ServiceHost host;
 
         public Products()
         {
            
             InitializeComponent();
+
+            
+            host = new ServiceHost(typeof(Service1Client), new Uri("http://localhost:2698/Service1.svc"));
+
+            
          
         }
 
@@ -100,38 +109,39 @@ namespace MusicShop
         {
             MessageBox.Show("Product has been update in you basket", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
 
-            MusicShopDB db = new MusicShopDB();
-
-            Order SaveOrder = new Order();
-
-            MainWindow main = new MainWindow();
-
-            LoginControl loginControl = new LoginControl();
-
-            //  var result = db.Clients.Where(x => x.Login == main.LoginPanel.Text).Select(x => x.Id).FirstOrDefault();
-
-
-
-            var result2 = db.Clients.Where(x => x.Login == main.LoginPanel.Text).Select(x => x.Id).SingleOrDefault();
-
-            txtbtn.Text = result2.ToString();
-
-            
-
-            SaveOrder.clientId = result2;
-            SaveOrder.ProductId = 1;
-
-            db.Orders.Add(SaveOrder);
-            db.SaveChanges();
+        
             
         }
 
+        private void SaleBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DiscountBorder.Visibility = Visibility.Visible;
+
+        }
 
 
+        private void DiscountBtn_Click(object sender, RoutedEventArgs e)
+        {
+            
 
+            int Price, Discount, AllDiscount;
 
+            DiscountServiceReference.Service1Client discount = new Service1Client();
 
+            Price = int.Parse(CurrentPriceTbx.Text);
+            Discount = int.Parse(DiscountTbx.Text);
 
-        
+            AllDiscount = discount.CountDiscount(Price, Discount);
+
+            DiscountAll.Text = AllDiscount.ToString();
+        }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DiscountBorder.Visibility = Visibility.Hidden;
+          
+        }
+
+      
     }
 }

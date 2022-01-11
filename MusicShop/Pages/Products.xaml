@@ -232,6 +232,44 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <ImageBrush x:Key="ExitBtn1" ImageSource="/MusicShop;component/Images/exit2.PNG"/>
+        <Style x:Key="ExitBtn" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource ExitBtn1}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource ExitBtn1}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource ExitBtn1}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource ExitBtn1}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Page.Resources>
     <Page.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
@@ -307,7 +345,13 @@
                             <ImageBrush ImageSource="/MusicShop;component/Images/BuyNow.png" Stretch="UniformToFill"/>
                         </Button.Background>
                     </Button>
-                    
+
+                    <Button x:Name="SaleBtn"  Height="85" Width="140"  BorderBrush="{x:Null}"   Style="{DynamicResource BuyNow3Btn}" Margin="80,20,-520,20" Click="SaleBtn_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="/MusicShop;component/Images/DISCOUNT.png" Stretch="UniformToFill"/>
+                        </Button.Background>
+                    </Button>
+
                     <Button HorizontalAlignment="Right" Height="200" Margin="200,0,105,270" Width="164" BorderBrush="#FF434343" Foreground="{x:Null}" Opacity="0.34" >
                         <Button.Background>
                             <ImageBrush ImageSource="/MusicShop;component/Images/Soon.png" Stretch="Uniform"/>
@@ -319,18 +363,18 @@
                         </Button.Background>
 
                     </Button>
-                    
+
                     <Button x:Name="BuyNowBtn2" Height="35"  Width="140"   BorderBrush="{x:Null}"   Style="{DynamicResource BuyNow2Btn}" Margin="0,20,150,20" >
                         <Button.Background>
                             <ImageBrush Stretch="UniformToFill" ImageSource="/MusicShop;component/Images/BuyNow.png"/>
                         </Button.Background>
                     </Button>
-                    
+
                     <Button x:Name="TShirt1Btn"  HorizontalAlignment="Right" Height="200" Margin="0,0,660,270" Width="164" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="TShirt1Btn_Click"  >
                         <Button.Background>
                             <ImageBrush ImageSource="/MusicShop;component/Images/clothes2.PNG" Stretch="UniformToFill"/>
                         </Button.Background>
-                        
+
 
                     </Button>
                     <Button x:Name="BuyNowBtn1" Height="35" Width="140" Margin="-500,20,20,20" BorderBrush="{x:Null}" Style="{DynamicResource BuyNow1Btn}" Click="BuyNowBtn1_Click"  >
@@ -364,9 +408,9 @@
                     </Button>
 
 
-                    
-                    
-                
+
+
+
                 </Grid>
                 <Grid x:Name="Product1Grid"  Margin="350,60,350,100" Visibility="Hidden" MouseLeave="Product1Grid_MouseLeave">
                     <Grid.Background>
@@ -390,7 +434,46 @@
 
                     <TextBlock x:Name="Product3Tbx" Margin="25,450,25,-0.2" TextAlignment="Center" FontWeight="Bold" Background="White" Opacity="0.5" />
                 </Grid>
-                <TextBlock x:Name="txtbtn" HorizontalAlignment="Left" Height="36" Margin="23,351,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108" Background="White"/>
+
+                <Border x:Name="DiscountBorder" CornerRadius="20" BorderThickness="10" BorderBrush="White"  Height="245" Width="355" Visibility="Hidden">
+                    <Border CornerRadius="5" BorderThickness="12"  >
+                        <Border.BorderBrush>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Color="black" Offset="0.0"/>
+                                <GradientStop Color="BlueViolet" Offset="0.5"/>
+                                <GradientStop Color="DarkBlue" Offset="1.1"/>
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+
+                        <Grid  >
+                            <Grid.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+
+                                    <GradientStop Color="black" Offset="0.0"/>
+                                    <GradientStop Color="BlueViolet" Offset="0.5"/>
+                                    <GradientStop Color="DarkBlue" Offset="1.1"/>
+                                </LinearGradientBrush>
+                            </Grid.Background>
+                            <StackPanel Margin="110,0,77,61.6">
+                                <TextBox x:Name="CurrentPriceTbx"  Margin="40,30,0,70" Background="White" Height="20" Foreground="Black" Opacity="0.7"/>
+                                <TextBox x:Name="DiscountTbx"  Margin="40,-80,0,0" Background="White" Height="20" Opacity="0.7"  />
+                                <TextBox x:Name="DiscountAll"  Margin="40,0,0,0" Background="White" Height="20" Opacity="0.7" />
+                            </StackPanel>
+                            <Button x:Name="DiscountBtn" Content="Count your discount !" Height="20" Width="200" Margin="40,40,40,-120" Background="White"  Opacity="0.7" Click="DiscountBtn_Click" FontWeight="Bold" FontStyle="Italic" />
+                            <StackPanel HorizontalAlignment="Left" Height="174" Margin="3,4,0,0" VerticalAlignment="Top" Width="105">
+                                <TextBox Text="Current Price" Margin="0,28,0,20" TextAlignment="Right" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" FontStyle="Italic" Foreground="White" Opacity="0.8" />
+                                <TextBox Text="% Of Discount" Margin="0,0,0,20" TextAlignment="Right" SelectionTextBrush="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" FontWeight="Bold" FontStyle="Italic" Opacity="0.8" />
+                                <TextBox Text="Your Discount" Margin="0,15,0,20" TextAlignment="Right" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" FontStyle="Italic" Foreground="White" Opacity="0.8" />
+                            </StackPanel>
+                            <Button x:Name="ExitBtn"  HorizontalAlignment="Left" Height="39" Margin="-44,-39,0,0" VerticalAlignment="Top" Width="46" Style="{DynamicResource ExitBtn}" Click="ExitBtn_Click" >
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/MusicShop;component/Images/exit.png" Stretch="Uniform"/>
+                                </Button.Background>
+                            </Button>
+                        </Grid>
+                    </Border>
+                </Border>
+
 
 
 

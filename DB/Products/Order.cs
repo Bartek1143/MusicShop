@@ -14,5 +14,7 @@ namespace DB.Products
         public int ProductId { get; set; }
 
         public int clientId { get; set; }
+
+        public int OrderId { get; set; }
     }
 }

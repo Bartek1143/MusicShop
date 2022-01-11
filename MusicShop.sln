@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicShop", "MusicShop\MusicShop.csproj", "{6F5890F0-64FE-4A06-BB85-74D157E02322}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1CF1DC36-1951-4505-BD67-B740FF31C72D} = {1CF1DC36-1951-4505-BD67-B740FF31C72D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterUserControl", "RegisterUserControl\RegisterUserControl.csproj", "{14C77B77-9387-42BD-BCBC-5A988A5E2BC2}"
 EndProject
@@ -12,6 +15,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginUserControl", "LoginUserControl\LoginUserControl.csproj", "{DEB1B5D0-C9FE-40EC-B0EE-FF6E1361064D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterOrLoginUserControl", "RegisterOrLoginUserControl\RegisterOrLoginUserControl.csproj", "{16747AB5-4FF2-4396-A4D1-D51264CFCC53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountService", "DiscountService\DiscountService.csproj", "{1CF1DC36-1951-4505-BD67-B740FF31C72D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +44,10 @@ Global
 		{16747AB5-4FF2-4396-A4D1-D51264CFCC53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16747AB5-4FF2-4396-A4D1-D51264CFCC53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16747AB5-4FF2-4396-A4D1-D51264CFCC53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CF1DC36-1951-4505-BD67-B740FF31C72D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CF1DC36-1951-4505-BD67-B740FF31C72D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CF1DC36-1951-4505-BD67-B740FF31C72D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CF1DC36-1951-4505-BD67-B740FF31C72D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
