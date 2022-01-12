@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:MusicShop"
         xmlns:lg="clr-namespace:LoginUserControl;assembly=LoginUserControl"
         xmlns:vsc="clr-namespace:RegisterUserControl;assembly=RegisterUserControl"
+        xmlns:USC="clr-namespace:ShoppinBasket;assembly=ShoppinBasket"
     
         mc:Ignorable="d"
         Title="MainWindow" 
@@ -957,7 +958,22 @@
                         </Button.Background>
                     </Button>
                     <lg:LoginControl Margin="136,0,-50,50" Visibility="Hidden" x:Name="LoginPanel"/>
+
                 </Grid>
+                <USC:ShoppinBasket x:Name="ShoppinBaskUSC" Margin="50,100,50,50" Visibility="Hidden"/>
+                <Button x:Name="CloseBtn" Margin="-1,-5,920.8,623.8" BorderBrush="{x:Null}" Foreground="{x:Null}"  Visibility="Visible" RenderTransformOrigin="1.048,-0.049" Style="{DynamicResource ExitLoginBtn}" Click="CloseBtn_Click">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleY="0.676"/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="0.67"/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/exit.png"/>
+                    </Button.Background>
+                </Button>
 
 
 
@@ -1019,7 +1035,7 @@
                     </Grid.Background>
 
                 </Grid>
-                
+
             </Grid>
         </Border>
     </Border>

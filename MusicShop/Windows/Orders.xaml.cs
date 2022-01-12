@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using RegisterUserControl;
-using MusicShop.Client;
 using MusicShop.DB;
 using Microsoft.Identity.Client;
 using MusicShop;
@@ -82,35 +81,30 @@ namespace MusicShop.Windows
             {
 
 
-
                 var query = db.Orders.Join
-                (
-                db.Products, p => p.ProductId, o => o.Id, (r, p) => new
-                {
-                    r.clientId,
-                    r.ProductId,
-                    p.ProductName,
-                    p.Price
-                }
-                )
-                /* .Join(db.Clients, b => b.clientId, c => c.Id, (c, b) => new
-                 {
-                     b.Name,
-                     b.Surname,
-                     c.ProductName,
-                     c.Price
-                 })*/
-                .Join(db.Clients, b => Lg1.Text, c => c.Login, (c, b) => new
-                {
-                    b.Name,
-                    b.Surname,
-                    c.ProductName,
-                    c.Price
-                }).ToList().Take(5);
-               
+               (
+               db.Products, p => p.ProductId, o => o.Id, (r, p) => new
+               {
+                   r.clientId,
+                   r.ProductId,
+                   p.ProductName,
+                   p.Price
+               }
+               )
+               .Join(db.Clients, b => b.clientId, c => c.Id, (c, b) => new
+               {
+                   b.Name,
+                   b.Surname,
+                   c.ProductName,
+                   c.Price
+               }).Where( x => x.Name == NameBox.Text)
+               .ToList().Take(5);
 
 
                 DataGridOrder.ItemsSource = query;
+                
+
+               
 
             };
             

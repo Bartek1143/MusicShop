@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MusicShop"
+      xmlns:usc="clr-namespace:ShoppinBasket;assembly=ShoppinBasket"
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="1000"
       Background="Transparent"
@@ -405,6 +406,8 @@
                         <GradientStop Color="DarkBlue" Offset="1.1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
+                <usc:ShoppinBasket x:Name="ShoppingBasketUSC" Visibility="Hidden" Margin="60,100,60,60"/>
+
                 <DockPanel Margin="0,0,0,550">
                     <Button x:Name="Bag" BorderThickness="0" Height="202" VerticalAlignment="Top" Width="310" Margin="0,-50,-1750,-45.6" BorderBrush="{x:Null}" Foreground="{x:Null}" RenderTransformOrigin="0.5,0.5" Click="Bag_Click" Style="{DynamicResource Bag2}">
                         <Button.RenderTransform>
@@ -438,7 +441,7 @@
 
 
                 </DockPanel>
-                <Grid Margin="60,120,60,40" >
+                <Grid x:Name="gridPrd"  Margin="60,120,60,40" >
                     <Button x:Name="Tshirt3Btn" HorizontalAlignment="Right" Height="200" Margin="200,0,290,270" Width="164" BorderBrush="{x:Null}"  Foreground="{x:Null}" Click="Tshirt3Btn_Click" Style="{DynamicResource Tshirt3Btn}">
                         <Button.Background>
                             <ImageBrush ImageSource="/MusicShop;component/Images/clothes1.png" Stretch="UniformToFill"/>
@@ -514,9 +517,6 @@
                     </Button>
 
 
-
-
-
                 </Grid>
                 <Grid x:Name="Product1Grid"  Margin="350,60,350,100" Visibility="Hidden" MouseLeave="Product1Grid_MouseLeave">
                     <Grid.Background>
@@ -576,8 +576,12 @@
                                     <ImageBrush ImageSource="/MusicShop;component/Images/exit.png" Stretch="Uniform"/>
                                 </Button.Background>
                             </Button>
+                         
+
                         </Grid>
+                        
                     </Border>
+                    
                 </Border>
 
 

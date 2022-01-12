@@ -20,6 +20,7 @@ using MusicShop.DiscountServiceReference;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.Threading;
+using MusicShop.Windows;
 
 namespace MusicShop
 {
@@ -106,12 +107,18 @@ namespace MusicShop
             Product3Grid.Visibility = Visibility.Hidden;
         }
 
-        private void BuyNowBtn1_Click(object sender, RoutedEventArgs e)
+        public void BuyNowBtn1_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Product has been update in you basket", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Product will be update in you basket", "Information",MessageBoxButton.OKCancel, MessageBoxImage.Information);
 
-        
+
+            ShoppingBasketUSC.Visibility = Visibility.Visible;
+            gridPrd.Visibility = Visibility.Hidden;
+            ShoppingBasketUSC.OrderProduct1();
+          
+         
             
+
         }
 
         private void SaleBtn_Click(object sender, RoutedEventArgs e)
@@ -146,12 +153,21 @@ namespace MusicShop
         private void BuyNowBtn2_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Product has been update in you basket", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+            ShoppingBasketUSC.Visibility = Visibility.Visible;
+            gridPrd.Visibility = Visibility.Hidden;
+            ShoppingBasketUSC.OrderProduct2();
+
+
 
         }
 
         private void BuyNowBtn3_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Product has been update in you basket", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+            ShoppingBasketUSC.Visibility = Visibility.Visible;
+            gridPrd.Visibility = Visibility.Hidden;
+            ShoppingBasketUSC.OrderProduct3();
+
         }
     }
 }

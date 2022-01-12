@@ -14,7 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using RegisterUserControl;
-using MusicShop.Client;
 using MusicShop.DB;
 using Microsoft.Identity.Client;
 using MusicShop;
@@ -42,7 +41,9 @@ namespace MusicShop
         private void Bag_Click(object sender, RoutedEventArgs e)
         {
             ((Storyboard)Resources["BagAnimation"]).Begin();
-           
+            Order();
+         
+
         }
 
         private void Letter_Click(object sender, RoutedEventArgs e)
@@ -98,6 +99,16 @@ namespace MusicShop
             this.Visibility = Visibility.Hidden;
 
           
+        }
+
+        private void Order()
+        {
+            ShoppinBaskUSC.Visibility = Visibility.Visible;
+            MainBanner.Visibility = Visibility.Hidden;
+            CenterBannerButton1.Visibility = Visibility.Hidden;
+            CenterBannerButton2.Visibility = Visibility.Hidden;
+            CenterBannerButton3.Visibility = Visibility.Hidden;
+            
         }
         
             
@@ -237,6 +248,13 @@ namespace MusicShop
             OpeningGrid.Visibility = Visibility.Visible;
             MainBanner.Visibility = Visibility.Hidden;
                 
+        }
+
+      
+
+        private void CloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
