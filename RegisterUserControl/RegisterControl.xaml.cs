@@ -67,6 +67,8 @@ namespace RegisterUserControl
 
         }
 
+       
+
     
 
         public void RegisterButton_Click(object sender, RoutedEventArgs e)

@@ -108,7 +108,11 @@
                         </TextBlock>
 
                     </DockPanel>
+                    
                     <Grid x:Name="OrderGridView" Margin="0,-200,20,-40"  >
+                        
+                            
+                        
                         <DataGrid x:Name="DataGridOrder" BorderBrush="{x:Null}" Margin="0,0,62.2,0" AutoGenerateColumns="False" Background="{x:Null}" Opacity="0.6" IsReadOnly="True"  >
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Foreground="Black"  />
@@ -125,7 +129,7 @@
 
 
 
-                    <TextBlock x:Name="NameBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Foreground="White" FontWeight="Bold" />
+                    <TextBlock x:Name="NameBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Foreground="White" FontWeight="Bold"/>
                     <TextBlock x:Name="SurnameBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Foreground="White" FontWeight="Bold"/>
                     <TextBlock x:Name="EmailBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Foreground="White" FontWeight="Bold"/>
                     <TextBlock x:Name="AddressBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Foreground="White" FontWeight="Bold"/>
@@ -137,8 +141,8 @@
                 </StackPanel>
                 <StackPanel Margin="180,0,0,220" x:Name="LogStckPnl" Visibility="Visible">
                     <TextBlock HorizontalAlignment="Left" Margin="290,25,20,20"   Text="Login" VerticalAlignment="Top" Foreground="White" FontSize="16" FontStyle="Italic"/>
-                    <TextBox x:Name="Lg1" HorizontalAlignment="Left" Height="35" Margin="350,-45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Foreground="Black" FontWeight="Bold" Background="White" Opacity="0.5" TextAlignment="Center" />
-                    <Button x:Name="ContinueBtn" Content="Continue" HorizontalAlignment="Left" Height="21" Margin="350,0,0,0" VerticalAlignment="Top" Width="125" Background="White" Opacity="0.5" RenderTransformOrigin="0.903,0.638" Click="ContinueBtn_Click"/>
+                    <TextBox x:Name="Lg1" HorizontalAlignment="Left" Height="35" Margin="350,-45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Foreground="Black" FontWeight="Bold" Background="White" Opacity="0.5" TextAlignment="Center" TextChanged="Lg1_TextChanged" />
+                    <Button x:Name="ContinueBtn" Content="Continue" HorizontalAlignment="Left" Height="21" Margin="350,0,0,0" VerticalAlignment="Top" Width="125" Background="White" Opacity="0.5" RenderTransformOrigin="0.903,0.638" Click="ContinueBtn_Click" IsEnabled="False"/>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Left" Height="350" Margin="403,0,0,0" VerticalAlignment="Top" Width="118" x:Name="DetailsStpn2" Visibility="Hidden">
                     <TextBlock HorizontalAlignment="Left" Margin="25,25,20,20"   Text="Name" VerticalAlignment="Top" Foreground="White" FontSize="16" FontStyle="Italic"/>

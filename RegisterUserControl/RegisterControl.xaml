@@ -38,6 +38,7 @@
                     <TextBox x:Name="AgeBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
                     <PasswordBox x:Name="Password" Margin="100,20,0,0" HorizontalAlignment="Left" Height="35" Width="165" CaretBrush="White" MaxLength="15"/>
                     <TextBox x:Name="LoginBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                    <TextBox x:Name="IdBox" HorizontalAlignment="Left" Height="35" Margin="100,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Visibility="Hidden"/>
 
                 </StackPanel>
 
