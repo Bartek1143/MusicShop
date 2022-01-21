@@ -18,8 +18,6 @@ namespace MusicShop.Pages
         {
             return KindOfProduct() + Cotton + GetSeparator() + Polyester;
         }
-       
-
 
     }
      public class Tshirt : Clothes
@@ -33,9 +31,6 @@ namespace MusicShop.Pages
         { 
             return "Product have "; 
         }
-            
-        
-
 
     }
     public class Jacket : Clothes

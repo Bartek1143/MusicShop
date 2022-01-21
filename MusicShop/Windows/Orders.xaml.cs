@@ -35,25 +35,12 @@ namespace MusicShop.Windows
            
 
         }
-
         MusicShopDB db = new MusicShopDB();
-        Order order = new Order();
-        LoginControl loginControl = new LoginControl();
-        MainWindow main = new MainWindow();
-        ProductsBase products = new ProductsBase();
-        DB.Client client = new DB.Client();
-        
-
-
 
         public void Details()
-        {
-            
-            MainWindow window = new MainWindow();
+        {       
+                MainWindow window = new MainWindow();
 
-
-
-          
                 var resultName = db.Clients.Where(x => x.Login == Lg1.Text).Select(n => n.Name).FirstOrDefault().ToString();
                 var resultSurname = db.Clients.Where(x => x.Login == Lg1.Text).Select(n => n.Surname).FirstOrDefault().ToString();
                 var resultEmail = db.Clients.Where(x => x.Login == Lg1.Text).Select(n => n.Email).FirstOrDefault().ToString();
@@ -61,29 +48,18 @@ namespace MusicShop.Windows
                 var resultPhone = db.Clients.Where(x => x.Login == Lg1.Text).Select(n => n.PhoneNumber).FirstOrDefault();
                 var resultAge = db.Clients.Where(x => x.Login == Lg1.Text).Select(n => n.Age).FirstOrDefault().ToString();
 
-
                 NameBox.Text = resultName.ToString();
                 SurnameBox.Text = resultSurname.ToString();
                 EmailBox.Text = resultEmail.ToString();
                 AddressBox.Text = resultAddress.ToString();
                 PhoneNumberBox.Text = resultPhone;
                 AgeBox.Text = resultAge.ToString();
-
-            
-
-
-
         }
         
         private void Order()
         {
-            
-
-
             var check = db.Clients.Where(x => x.Login == Lg1.Text).FirstOrDefault().ToString();
             {
-
-
                 var query = db.Orders.Join
                (
                db.Products, p => p.ProductId, o => o.Id, (r, p) => new
@@ -103,42 +79,18 @@ namespace MusicShop.Windows
                }).Where( x => x.Name == NameBox.Text)
                .ToList().Take(5);
 
-
                 DataGridOrder.ItemsSource = query;
-                
-
-               
-
-            };
-            
-
-           
-
-
-
-         
-                
-
-                
-               
-
-
-
-            
-                          
+            };                 
         }
 
         private void ContinueBtn_Click(object sender, RoutedEventArgs e)
-        {
-           
+        {  
                 Details();
                 LogStckPnl.Visibility = Visibility.Hidden;
                 DetailsStpn2.Visibility = Visibility.Visible;
                 DetailsStpnl.Visibility = Visibility.Visible;
                 Order();
-            
-
-         }
+        }
            
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)

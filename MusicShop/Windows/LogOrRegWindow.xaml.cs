@@ -32,16 +32,11 @@ namespace MusicShop.LoginWindow
       
         private void SignInBtn_Click(object sender, RoutedEventArgs e)
         {
-
             this.Close();
-            
-           
-           
         }
 
         private void RegisterInBtn_Click(object sender, RoutedEventArgs e)
-        {
-            
+        {    
             this.Close();
         }
     }

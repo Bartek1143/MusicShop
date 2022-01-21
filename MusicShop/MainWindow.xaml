@@ -285,14 +285,12 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <!--<Setter Property="Background"  TargetName="border" Value="#FF3D3D3D"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="#FF3D3D3D"/>-->
+                        
                                 <Setter Property="Background" TargetName="border" Value="black"/>
                                 <Setter Property="Opacity" TargetName="border" Value="0.2"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>-->
+                         
                                 <Setter Property="Background" TargetName="border" Value="black"/>
                                 <Setter Property="Opacity" TargetName="border" Value="0.2"/>
                             </Trigger>
@@ -326,15 +324,13 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>-->
+                               
                                 <Setter Property="Background" TargetName="border" Value="black"/>
                                 <Setter Property="Opacity" TargetName="border" Value="0.2"/>
 
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>-->
+                        
                                 <Setter Property="Background" TargetName="border" Value="black"/>
                                 <Setter Property="Opacity" TargetName="border" Value="0.2"/>
                                 <!-- MAKE BUTTON AS GENTLE BLACK BACKGROUND-->
@@ -369,14 +365,12 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>-->
+                      
                                 <Setter Property="Background" TargetName="border" Value="black"/>
                                 <Setter Property="Opacity" TargetName="border" Value="0.2"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>-->
+                   
                                 <Setter Property="Background" TargetName="border" Value="black"/>
                                 <Setter Property="Opacity" TargetName="border" Value="0.2"/>
                             </Trigger>
@@ -410,14 +404,12 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>-->
+                              
                                 <Setter Property="Background" TargetName="border" Value="black"/>
                                 <Setter Property="Opacity" TargetName="border" Value="0.2"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>-->
+                           
                                 <Setter Property="Background" TargetName="border" Value="black"/>
                                 <Setter Property="Opacity" TargetName="border" Value="0.2"/>
                             </Trigger>
@@ -451,14 +443,12 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>-->
+                            
                                 <Setter Property="Background" TargetName="border" Value="black"/>
                                 <Setter Property="Opacity" TargetName="border" Value="0.2"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>-->
+                         
                                 <Setter Property="Background" TargetName="border" Value="black"/>
                                 <Setter Property="Opacity" TargetName="border" Value="0.2"/>
 
@@ -493,13 +483,11 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <!--<Setter Property="Background" TargetName="border"  Value="black"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="black"/>-->
+                              
                                 <Setter Property="Opacity" TargetName="border" Value="0.4"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <!--<Setter Property="Background" TargetName="border"  Value="black"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="black"/>-->
+                            
                                 <Setter Property="Opacity" TargetName="border" Value="0.4"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
@@ -532,13 +520,11 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>-->
+                           
                                 <Setter Property="Opacity" TargetName="border" Value="0.4"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>-->
+                             
                                 <Setter Property="Opacity" TargetName="border" Value="0.4"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
@@ -571,13 +557,11 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>-->
+                              
                                 <Setter Property="Opacity" TargetName="border" Value="0.4"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>-->
+                   
                                 <Setter Property="Opacity" TargetName="border" Value="0.4"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
@@ -610,13 +594,11 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>-->
+                               
                                 <Setter Property="Opacity" TargetName="border" Value="0.4"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <!--<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>-->
+                                
                                 <Setter Property="Opacity" TargetName="border" Value="0.4"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
@@ -887,7 +869,7 @@
                             </TransformGroup>
                         </Button.RenderTransform>
                         <Button.Background>
-                            <ImageBrush ImageSource="letter1.png" Stretch="Uniform"/>
+                            <ImageBrush ImageSource="Images/letter1.png" Stretch="Uniform"/>
                         </Button.Background>
                     </Button>
 

@@ -38,13 +38,23 @@ namespace MusicShop
 
         }
 
+        #region Up menu
+
         private void Bag_Click(object sender, RoutedEventArgs e)
         {
             ((Storyboard)Resources["BagAnimation"]).Begin();
             Order();
-         
-
         }
+        #region Bag click
+        private void Order()
+        {
+            ShoppinBaskUSC.Visibility = Visibility.Visible;
+            MainBanner.Visibility = Visibility.Hidden;
+            CenterBannerButton1.Visibility = Visibility.Hidden;
+            CenterBannerButton2.Visibility = Visibility.Hidden;
+            CenterBannerButton3.Visibility = Visibility.Hidden;
+        }
+        #endregion
 
         private void Letter_Click(object sender, RoutedEventArgs e)
         {
@@ -71,76 +81,28 @@ namespace MusicShop
             LogOrRegWindow MenuWindow = new LogOrRegWindow();
             MenuWindow.Show();
             MenuWindow.SignInBtn.Click += SignInBtn_Click;
-            MenuWindow.RegisterInBtn.Click += RegisterInBtn_Click;
-            
-            
-
+            MenuWindow.RegisterInBtn.Click += RegisterInBtn_Click;   
         }
 
+        #region User click events
         private void RegisterInBtn_Click(object sender, RoutedEventArgs e)
         {
             Register();
         }
 
-        private void SignInBtn_Click(object sender, RoutedEventArgs e)
-        {
-            SignIn();
-            
-         
-        }
-
-        private void Accessories_Click(object sender, RoutedEventArgs e)
-        {
-
-            NavigationWindow AccessoriesPage = new NavigationWindow();
-            AccessoriesPage.Source = new Uri("Pages/Products.xaml", UriKind.Relative);
-            AccessoriesPage.Show();
-            AccessoriesPage.Height = 750;  
-            this.Visibility = Visibility.Hidden;
-
-          
-        }
-
-        private void Order()
-        {
-            ShoppinBaskUSC.Visibility = Visibility.Visible;
-            MainBanner.Visibility = Visibility.Hidden;
-            CenterBannerButton1.Visibility = Visibility.Hidden;
-            CenterBannerButton2.Visibility = Visibility.Hidden;
-            CenterBannerButton3.Visibility = Visibility.Hidden;
-            
-        }
-        
-            
-
         public void Register()
         {
-           // RegisterControl register = new RegisterControl();
             RegisterPanel.Visibility = Visibility.Visible;
             ExitRegisterButton.Visibility = Visibility.Visible;
             MainBanner.Visibility = Visibility.Hidden;
             CenterBannerButton1.Visibility = Visibility.Hidden;
             CenterBannerButton2.Visibility = Visibility.Hidden;
-            CenterBannerButton3.Visibility =  Visibility.Hidden;
-
-     
-
+            CenterBannerButton3.Visibility = Visibility.Hidden;
         }
 
-       
-        
-        
-
-        private void ExitRegisterButton_Click(object sender, RoutedEventArgs e)
+        private void SignInBtn_Click(object sender, RoutedEventArgs e)
         {
-   
-            RegisterPanel.Visibility = Visibility.Hidden;
-            ExitRegisterButton.Visibility = Visibility.Hidden;
-            MainBanner.Visibility = Visibility.Visible;
-            CenterBannerButton1.Visibility = Visibility.Visible;
-            CenterBannerButton2.Visibility = Visibility.Visible;
-            CenterBannerButton3.Visibility = Visibility.Visible;
-
+            SignIn();
         }
 
         public void SignIn()
@@ -151,46 +113,13 @@ namespace MusicShop
             CenterBannerButton1.Visibility = Visibility.Hidden;
             CenterBannerButton2.Visibility = Visibility.Hidden;
             CenterBannerButton3.Visibility = Visibility.Hidden;
-          
-
-
-
         }
+        #endregion
+        #endregion
 
-        private void ExitLoginButton_Click(object sender, RoutedEventArgs e)
-        {
-            NameBtn.Text = /* "User " +*/ LoginPanel.Text;
-            ExitLoginButton.Visibility = Visibility.Hidden;
-            LoginPanel.Visibility = Visibility.Hidden; 
-            MainBanner.Visibility = Visibility.Visible;
-            CenterBannerButton1.Visibility = Visibility.Visible;
-            CenterBannerButton2.Visibility = Visibility.Visible;
-            CenterBannerButton3.Visibility = Visibility.Visible;
-            
-            
-        }
+        #region Left menu
 
-        private void CenterBannerButton2_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationWindow AccessoriesPage = new NavigationWindow();
-            AccessoriesPage.Source = new Uri("Pages/Products.xaml", UriKind.Relative);
-            AccessoriesPage.Show();
-            AccessoriesPage.Height = 750;
-            this.Visibility = Visibility.Hidden;
-
-         
-        }
-
-        private void CenterBannerButton1_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationWindow AccessoriesPage = new NavigationWindow();
-            AccessoriesPage.Source = new Uri("Pages/Products.xaml", UriKind.Relative);
-            AccessoriesPage.Show();
-            AccessoriesPage.Height = 750;
-            this.Visibility = Visibility.Hidden;
-        }
-
-        private void CenterBannerButton3_Click(object sender, RoutedEventArgs e)
+        private void Accessories_Click(object sender, RoutedEventArgs e)
         {
             NavigationWindow AccessoriesPage = new NavigationWindow();
             AccessoriesPage.Source = new Uri("Pages/Products.xaml", UriKind.Relative);
@@ -212,26 +141,24 @@ namespace MusicShop
             CenterBannerButton2.Visibility = Visibility.Hidden;
             CenterBannerButton3.Visibility = Visibility.Hidden;
             OpeningGrid.Visibility = Visibility.Hidden;
-
         }
 
-
-
+        #region Community contact
         private void FB_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.facebook.com/oolinek");
-        }
+        }       // Navigate to facebook
 
         private void GM_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("bartlomiej.olesinski2@gmail.com", "Email", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
+        }       // Navigate to Gmail
 
         private void LK_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.linkedin.com/in/bart%C5%82omiej-olesi%C5%84ski-a72ab0192/"); 
-        }
-
+            System.Diagnostics.Process.Start("https://www.linkedin.com/in/bart%C5%82omiej-olesi%C5%84ski-a72ab0192/");
+        }       // Navigate to Linkedin
+        #endregion
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
@@ -247,14 +174,70 @@ namespace MusicShop
         {
             OpeningGrid.Visibility = Visibility.Visible;
             MainBanner.Visibility = Visibility.Hidden;
-                
         }
 
-      
+        #endregion
+
+        #region T-shirt Banners
+
+        private void CenterBannerButton2_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationWindow AccessoriesPage = new NavigationWindow();
+            AccessoriesPage.Source = new Uri("Pages/Products.xaml", UriKind.Relative);
+            AccessoriesPage.Show();
+            AccessoriesPage.Height = 750;
+            this.Visibility = Visibility.Hidden;
+        }
+
+        private void CenterBannerButton1_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationWindow AccessoriesPage = new NavigationWindow();
+            AccessoriesPage.Source = new Uri("Pages/Products.xaml", UriKind.Relative);
+            AccessoriesPage.Show();
+            AccessoriesPage.Height = 750;
+            this.Visibility = Visibility.Hidden;
+        }
+
+        private void CenterBannerButton3_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationWindow AccessoriesPage = new NavigationWindow();
+            AccessoriesPage.Source = new Uri("Pages/Products.xaml", UriKind.Relative);
+            AccessoriesPage.Show();
+            AccessoriesPage.Height = 750;
+            this.Visibility = Visibility.Hidden;
+        }
+
+        #endregion
+
+
+        private void ExitRegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+   
+            RegisterPanel.Visibility = Visibility.Hidden;
+            ExitRegisterButton.Visibility = Visibility.Hidden;
+            MainBanner.Visibility = Visibility.Visible;
+            CenterBannerButton1.Visibility = Visibility.Visible;
+            CenterBannerButton2.Visibility = Visibility.Visible;
+            CenterBannerButton3.Visibility = Visibility.Visible;
+
+        }
+
+
+        private void ExitLoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            NameBtn.Text = /* "User " +*/ LoginPanel.Text;
+            ExitLoginButton.Visibility = Visibility.Hidden;
+            LoginPanel.Visibility = Visibility.Hidden; 
+            MainBanner.Visibility = Visibility.Visible;
+            CenterBannerButton1.Visibility = Visibility.Visible;
+            CenterBannerButton2.Visibility = Visibility.Visible;
+            CenterBannerButton3.Visibility = Visibility.Visible;   
+        }
+
 
         private void CloseBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
+        }      // Close application
     }
 }
