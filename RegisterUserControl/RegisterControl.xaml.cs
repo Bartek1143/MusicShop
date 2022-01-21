@@ -20,22 +20,15 @@ using MusicShop.DB;
 
 namespace RegisterUserControl
 {
-    /// <summary>
-    /// Interaction logic for UserControl1.xaml
-    /// </summary>
+
     public partial class RegisterControl : UserControl
     {
       
-
         public RegisterControl()
         {
             InitializeComponent();
          
         }
-
-       
-
-
 
 
         public void RegisterData()
@@ -53,28 +46,17 @@ namespace RegisterUserControl
             Save.Password = Password.Password;
             Save.Login = LoginBox.Text;
 
-           
-           
-           
-           
             db.Clients.Add(Save);
             db.SaveChanges();
             RegisterControl register = new RegisterControl();
 
             MessageBox.Show("Thank you for register, please shut the window", "Information", MessageBoxButton.OKCancel, MessageBoxImage.Information);
-            
-
-
-        }
-
-       
-
-    
+        }          // Save data of client to database
 
         public void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
             RegisterData();
-            
+ 
         }
     }
 }

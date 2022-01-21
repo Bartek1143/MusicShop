@@ -16,9 +16,7 @@ using System.Windows.Shapes;
 
 namespace RegisterOrLoginUserControl
 {
-    /// <summary>
-    /// Interaction logic for UserControl1.xaml
-    /// </summary>
+
     public partial class RegOrLogControl : UserControl
     {
         public RegOrLogControl()
@@ -26,8 +24,8 @@ namespace RegisterOrLoginUserControl
             InitializeComponent();
         }
 
-        
 
+        // Navigate to mainwindow and choose what would you like make ( register or login )
         private void SignInBtn_Click(object sender, RoutedEventArgs e)
         {
 

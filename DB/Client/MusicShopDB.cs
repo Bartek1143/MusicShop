@@ -6,7 +6,7 @@ using MusicShop.DB;
 
 namespace MusicShop
 {
-    public class MusicShopDB : Microsoft.EntityFrameworkCore.DbContext
+    public class MusicShopDB : DbContext
     {
         // Your context has been configured to use a 'MusicShopDB' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 
@@ -19,13 +19,13 @@ namespace MusicShop
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
-       // public virtual Microsoft.EntityFrameworkCore.DbSet<ShoppingCart> ShoppingCarts { get; set; }
+      
        
-        public virtual Microsoft.EntityFrameworkCore.DbSet<ProductsBase> Products { get; set; }
+        public virtual DbSet<ProductsBase> Products { get; set; }
 
-         public virtual Microsoft.EntityFrameworkCore.DbSet<Client> Clients { get; set; }
+        public virtual DbSet<Client> Clients { get; set; }
 
-        public virtual Microsoft.EntityFrameworkCore.DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -33,13 +33,8 @@ namespace MusicShop
 
             optionsBuilder.UseSqlServer("Server=NT-27.WWSI.EDU.PL,1601;Database=KASETY_501_17;User Id=Z501_17;Password=Z501_17;");
         } 
-       
+ 
 
     }
-
-    //public class MyEntity
-    //{
-    //    public int Id { get; set; }
-    //    public string Name { get; set; }
-    //}
+ 
 }

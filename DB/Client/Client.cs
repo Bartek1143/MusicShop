@@ -18,15 +18,12 @@ namespace MusicShop.DB
         [MaxLength(30)]
         public string Surname { get; set; }
 
-         
-         [MaxLength(15)]
+        [MaxLength(15)]
         public string Name { get; set; }
 
-        
         [Required]
         public string Email { get; set; }
 
-        
         public string Address { get; set; }
 
         public string PhoneNumber { get; set; }
@@ -35,6 +32,7 @@ namespace MusicShop.DB
 
         [Required]
         public string Password { get; set; }
+
         [Required]
         public string Login { get; set; }
     }

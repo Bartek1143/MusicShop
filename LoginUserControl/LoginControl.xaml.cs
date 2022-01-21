@@ -28,15 +28,10 @@ namespace LoginUserControl
             
         }
 
+        // Check if login and password are correct
         public void Login()
         {
-            //Client Compare = new Client();
-            //IConnection connection = new ClientIMP();
-            //List<Client> clients = connection.ReturnList();
-
             MusicShopDB db = new MusicShopDB();
-            
-
             var result = db.Clients.Any(x => x.Login == LoginBox.Text && x.Password == Password.Password);
                 {
                 if(result == true)
@@ -52,17 +47,12 @@ namespace LoginUserControl
                
             };
 
-
         }
 
         public void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             Login();
         }
-
-       
-
-      
 
         public string login;
 
@@ -72,9 +62,6 @@ namespace LoginUserControl
             set { value = login ; }
         }
 
-        public void LoginBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            login = LoginBox.Text;
-        }
+        
     }
 }
