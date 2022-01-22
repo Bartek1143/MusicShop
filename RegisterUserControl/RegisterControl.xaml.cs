@@ -37,20 +37,28 @@ namespace RegisterUserControl
             Client Save = new Client();
             
             // automatically increment of Id
-            Save.Name = NameBox.Text;
-            Save.Surname = SurnameBox.Text;
-            Save.PhoneNumber = PhoneNumberBox.Text;
-            Save.Age = AgeBox.Text;
-            Save.Email = EmailBox.Text;
-            Save.Address = AddressBox.Text;
-            Save.Password = Password.Password;
-            Save.Login = LoginBox.Text;
+            try
+            {
+                Save.Name = NameBox.Text;
+                Save.Surname = SurnameBox.Text;
+                Save.PhoneNumber = PhoneNumberBox.Text;
+                Save.Age = AgeBox.Text;
+                Save.Email = EmailBox.Text;
+                Save.Address = AddressBox.Text;
+                Save.Password = Password.Password;
+                Save.Login = LoginBox.Text;
 
-            db.Clients.Add(Save);
-            db.SaveChanges();
-            RegisterControl register = new RegisterControl();
-
-            MessageBox.Show("Thank you for register, please shut the window", "Information", MessageBoxButton.OKCancel, MessageBoxImage.Information);
+                db.Clients.Add(Save);
+                db.SaveChanges();
+               
+                MessageBox.Show("Thank you for register, please shut the window", "Information", MessageBoxButton.OKCancel, MessageBoxImage.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Wrong email or password","Check again",MessageBoxButton.OK,MessageBoxImage.Error);
+            }
+           
+            
         }          // Save data of client to database
 
         public void RegisterButton_Click(object sender, RoutedEventArgs e)
