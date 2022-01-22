@@ -19,8 +19,7 @@ namespace MusicShop
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
-      
-       
+   
         public virtual DbSet<ProductsBase> Products { get; set; }
 
         public virtual DbSet<Client> Clients { get; set; }
@@ -30,11 +29,8 @@ namespace MusicShop
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-
-            optionsBuilder.UseSqlServer("Server=NT-27.WWSI.EDU.PL,1601;Database=KASETY_501_17;User Id=Z501_17;Password=Z501_17;");
+            optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=MusicShop;Integrated Security=True");
         } 
- 
-
     }
  
 }

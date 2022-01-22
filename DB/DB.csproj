@@ -297,7 +297,7 @@
   <ItemGroup>
     <Compile Include="Client\Client.cs" />
     <Compile Include="Client\DbObject.cs" />
-    <Compile Include="Client\MusicShopDB.cs" />
+    <Compile Include="Context\MusicShopDB.cs" />
     <Compile Include="Products\Order.cs" />
     <Compile Include="Products\ProductsBase.cs" />
     <Compile Include="Migrations\20220110154020_Init.cs" />
@@ -311,6 +311,7 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
