@@ -9,5 +9,5 @@ Project use C# and XAML language.
 Target Framework is .NET Framework 4.8
 
 ## Screenshots
-![Main Page](./Images Of Music Shop/MainPage.png)
+![Main Page](./Images Of Music Shop/PreviousOrder.PNG)
 
