@@ -26,7 +26,7 @@
 - Saving orders
 - Reviewing previous orders
 - By 'Contact' in left menu we can find profile of author(me)
-
+- I've used animation on almost every button to make the app more modern
 
 
 
