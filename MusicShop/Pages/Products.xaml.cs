@@ -16,7 +16,6 @@ using System.Windows.Shapes;
 using DB.Products;
 using MusicShop.Pages;
 using LoginUserControl;
-using MusicShop.DiscountServiceReference;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.Threading;
