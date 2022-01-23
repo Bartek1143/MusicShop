@@ -12,9 +12,6 @@ namespace MusicShop.DB
 {
     public class Client :DbObject
     {
-        
-       
-        
         [MaxLength(30)]
         public string Surname { get; set; }
 
